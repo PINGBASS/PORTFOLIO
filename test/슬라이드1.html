@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동 슬라이드 쇼</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .slider-container {
+            width: 80%;
+            max-width: 600px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+
+        .slide {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <!-- 슬라이드 이미지들 (총 25개) -->
+            <img class="slide" src="../img/LIIust/1.jpg" alt="슬라이드 1">
+            <img class="slide" src="../img/LIIust/2.jpg" alt="슬라이드 2">
+            <img class="slide" src="../img/LIIust/3.jpg" alt="슬라이드 3">
+            <img class="slide" src="../img/LIIust/4.jpg" alt="슬라이드 4">
+            <img class="slide" src="../img/LIIust/5.jpg" alt="슬라이드 5">
+            <!-- ... 총 25개 이미지 추가 ... -->
+            <img class="slide" src="../img/LIIust/5.jpg" alt="슬라이드 25">
+        </div>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        let currentIndex = 0;
+
+        function moveToNextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides; 
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(moveToNextSlide, 3000); 
+    </script>
+</body>
+</html>

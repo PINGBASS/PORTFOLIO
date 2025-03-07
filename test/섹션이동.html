@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네비게이션 메뉴 예시</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+section {
+  padding: 100px 20px;
+  height: 100vh;
+}
+
+section:nth-of-type(odd) {
+  background-color: #b4b4b4;
+}
+
+section:nth-of-type(even) {
+  background-color: #e2e2e2;
+}
+
+</style>
+<body>
+  <!-- 네비게이션 메뉴 -->
+  <nav>
+    <ul>
+      <li><a href="#section1">섹션 1</a></li>
+      <li><a href="#section2">섹션 2</a></li>
+      <li><a href="#section3">섹션 3</a></li>
+      <li><a href="#section4">섹션 4</a></li>
+    </ul>
+  </nav>
+
+  <!-- 섹션 1 -->
+  <section id="section1">
+    <h2>섹션 1</h2>
+    <p>이곳은 섹션 1입니다.</p>
+  </section>
+
+  <!-- 섹션 2 -->
+  <section id="section2">
+    <h2>섹션 2</h2>
+    <p>이곳은 섹션 2입니다.</p>
+  </section>
+
+  <!-- 섹션 3 -->
+  <section id="section3">
+    <h2>섹션 3</h2>
+    <p>이곳은 섹션 3입니다.</p>
+  </section>
+
+  <!-- 섹션 4 -->
+  <section id="section4">
+    <h2>섹션 4</h2>
+    <p>이곳은 섹션 4입니다.</p>
+  </section>
+
+</body>
+</html>

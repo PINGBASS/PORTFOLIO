@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+ 
+
+
+ document.addEventListener("DOMContentLoaded", function () {
+             const choices = document.querySelectorAll(".choice");
+ 
+             choices.forEach((choice) => {
+                 choice.addEventListener("click", function () {
+                     // Scroll to the corresponding section based on the color
+                     const color = this.getAttribute("data-color");
+                     const section = document.getElementById(color);
+                     if (section1) {
+                         section1.scrollIntoView({ behavior: "smooth" });
+                     }
+                 });
+             });
+         });
+ 
+         
+
+    </script>
+    <style>
+        @charset "utf8";
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .choice {
+            position: relative;
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            font-size: 1em;
+            color: #333;
+            cursor: pointer;
+            outline: none;
+            transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .choice:active {
+            transform: scale(0.95);
+        }
+
+        .container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section1 {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        #Red { background-color: #e74c3c; color: white; }
+        #Blue { background-color: #3498db; color: white; }
+        #Green { background-color: #2ecc71; color: white; }
+        #Yellow { background-color: #f1c40f; color: black; }
+        #Orange { background-color: #e67e22; color: white; }
+
+
+        /*-----------------------------------------------*/
+  
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <h1>Choose a Color</h1>
+        <div class="choices">
+            <button class="choice" data-color="Red">Red</button>
+            <button class="choice" data-color="Blue">Blue</button>
+            <button class="choice" data-color="Green">Green</button>
+            <button class="choice" data-color="Yellow">Yellow</button>
+            <button class="choice" data-color="Orange">Orange</button>
+        </div>
+    </div>
+
+    <!-- Sections that will be scrolled to -->
+    <div id="Red" class="section1">Red Section</div>
+    <div id="Blue" class="section1">Blue Section</div>
+    <div id="Green" class="section1">Green Section</div>
+    <div id="Yellow" class="section1">Yellow Section</div>
+    <div id="Orange" class="section1">Orange Section</div>
+
+
+
+
+
+    
+
+
+
+
+    
+
+</body>
+
+</html>

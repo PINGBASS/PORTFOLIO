@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>흩날리는 꽃</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f0f8ff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container1 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flower5, .flower8 {
+            position: absolute;
+            width: 10vw; 
+            height: 10vw;
+            background-size: cover;
+            animation: move 10s linear infinite, spin 5s linear infinite;
+        }
+
+          .flower8 {
+            position: absolute;
+            width: 6vw; 
+            height: 6vw;
+            background-size: cover;
+            animation: move 10s linear infinite, spin 5s linear infinite;
+        }
+
+
+        .flower9 {
+            position: absolute;
+            width: 6vw; 
+            height: 6vw;
+            background-size: cover;
+            animation: move2 10s linear infinite, spin2 5s linear infinite;
+        }
+        
+        .flower6 {
+            position: absolute;
+            width: 6vw; 
+            height: 6vw;
+            background-size: cover;
+            animation: move2 10s linear infinite, spin2 5s linear infinite;
+        }
+
+        .flower7 {
+            position: absolute;
+            width: 6vw; 
+            height: 6vw;
+            background-size: cover;
+            animation: move3 10s linear infinite, spin3 20s linear infinite;
+        }
+        /* 각 꽃의 초기 위치 및 애니메이션 지연 */
+        .flower5 {
+            top: 10vw;
+            left: 10vw;
+            animation-delay: 0s;
+        }
+
+        .flower6 {
+            top: 24vw;
+            left: 37vw;
+            animation-delay: 1s;
+        }
+
+        .flower7 {
+            top: 50px;
+            left: 50%;
+            animation-delay: 2s;
+        }
+
+        .flower8 {
+            top: 50px;
+            left: 70%;
+            animation-delay: 3s;
+        }
+        .flower9 {
+            top: 5vw;
+            left: 60vw;
+            animation-delay: 0s;
+        }
+
+       
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(30px, 100px) rotate(20deg); /* 오른쪽 위로 이동하고 회전 */
+            }
+            50% {
+                transform: translate(60px, 200px) rotate(40deg); /* 더 멀리 떨어지며 회전 */
+            }
+            75% {
+                transform: translate(90px, 300px) rotate(60deg); /* 아래쪽으로 이동하며 회전 */
+            }
+            100% {
+                transform: translate(120px, 400px) rotate(80deg); /* 계속 떨어지며 회전 */
+            }
+        }
+
+
+        @keyframes move2 {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(100px, 100px) rotate(20deg); /* 오른쪽 위로 이동하고 회전 */
+            }
+            50% {
+                transform: translate(150px, 200px) rotate(40deg); /* 더 멀리 떨어지며 회전 */
+            }
+            75% {
+                transform: translate(200px, 300px) rotate(60deg); /* 아래쪽으로 이동하며 회전 */
+            }
+            100% {
+                transform: translate(100px, 100px) rotate(80deg); /* 계속 떨어지며 회전 */
+            }
+        }
+    
+        @keyframes move3 {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(30px, 100px) rotate(20deg); /* 오른쪽 위로 이동하고 회전 */
+            }
+            50% {
+                transform: translate(60px, 200px) rotate(40deg); /* 더 멀리 떨어지며 회전 */
+            }
+            75% {
+                transform: translate(90px, 300px) rotate(60deg); /* 아래쪽으로 이동하며 회전 */
+            }
+            100% {
+                transform: translate(120px, 400px) rotate(80deg); /* 계속 떨어지며 회전 */
+            }
+        }
+
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg); /* 꽃이 한 바퀴 회전 */
+            }
+        }
+
+        
+        @keyframes spin2 {
+            0% {
+                opacity: 1;
+                transform: translate(-100%, 0) scale(1) ;
+            }
+            50% {
+                opacity: 0.5;
+                transform: translate(-100%, -10px) scale(1.2);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-100%, 0) scale(1);
+            }
+        }
+        @keyframes spin3 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg); /* 꽃이 한 바퀴 회전 */
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="image-container1">
+        <img src="img/ddddff.png" alt="Image 1" class="flower5">
+        <img src="img/ddddff.png" alt="Image 1" class="flower9">
+        <img src="img/dddds.png" alt="Image 2" class="flower6">
+        <img src="img/ddddf.png" alt="Image 3" class="flower7">
+        <img src="img/ddddss.png" alt="Image 4" class="flower8">
+    </div>
+</body>
+</html>
+
+

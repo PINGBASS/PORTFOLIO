@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .타원1 {
+    width: 220px;
+    height: 350px;
+    position: relative;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+    animation: rotateEllipse 20s infinite linear;
+}
+
+.image {
+    position: absolute;
+    width: 50px; 
+    height: 50px; 
+    transform-origin: center center;
+    top: 0;
+}
+
+.image-1 {
+    transform: translate(-12px, 90px);
+    left: 0;
+}
+.image-2 {
+    transform: translate(100px, -17px);
+    left: 0;
+}
+.image-3 {
+    transform: translate(0px, 290px);
+    left: 0;
+}
+.image-4 {
+    transform: translate(15px, 90px);
+    right: 0;
+}
+.image-5 {
+    transform: translate(0px, 290px);
+    right: 0;
+}
+
+@keyframes rotateEllipse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="타원1"> 
+        <img src="2D/1.png" class="image image-1"> 
+        <img src="2D/2.png" class="image image-2"> 
+        <img src="2D/3.png" class="image image-3"> 
+        <img src="2D/4.png" class="image image-4"> 
+        <img src="2D/5.png" class="image image-5"> 
+    </div>
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ellipse-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellipse {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    animation: moveAlongEllipse 10s linear infinite;
+}
+
+/* 타원형 경로를 따라서 이미지를 움직이게 하는 애니메이션 */
+@keyframes moveAlongEllipse {
+    0% {
+        transform: rotate(0deg) translateX(150px) rotate(0deg); /* 오른쪽 상단 */
+    }
+    20% {
+        transform: rotate(72deg) translateX(150px) rotate(-72deg); /* 위쪽 */
+    }
+    40% {
+        transform: rotate(144deg) translateX(150px) rotate(-144deg); /* 왼쪽 상단 */
+    }
+    60% {
+        transform: rotate(216deg) translateX(150px) rotate(-216deg); /* 왼쪽 */
+    }
+    80% {
+        transform: rotate(288deg) translateX(150px) rotate(-288deg); /* 왼쪽 하단 */
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg); /* 오른쪽 하단 */
+    }
+}
+
+/* 개별 이미지의 딜레이 설정 */
+.image-1 {
+    animation-delay: 0s;
+}
+
+.image-2 {
+    animation-delay: 2s;
+}
+
+.image-3 {
+    animation-delay: 4s;
+}
+
+.image-4 {
+    animation-delay: 6s;
+}
+
+.image-5 {
+    animation-delay: 8s;
+}
+
+    </style>
+</head>
+<body>
+   <div class="ellipse-container">
+    <div class="ellipse">
+        <img src="2D/1.png" class="image image-1">
+        <img src="2D/2.png" class="image image-2">
+        <img src="2D/3.png" class="image image-3">
+        <img src="2D/4.png" class="image image-4">
+        <img src="2D/5.png" class="image image-5">
+    </div>
+</div>
+
+    
+</body>
+</html>

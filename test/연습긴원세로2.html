@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ellipse-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 600px;
+}
+
+.ellipse {
+    position: absolute;
+    animation: rotateEllipse 30s infinite linear;
+    margin: 0 auto;
+}
+
+.fixed {
+    animation: rotateEllipse 35s infinite linear; /* 고정된 원도 회전하도록 설정 */
+}
+
+.ellipse1 {
+    width: 350px;
+    height: 150px;
+    background-color: rgba(255, 0, 0, 0.3);
+    animation-duration: 40s;
+    animation-direction: normal;
+}
+
+.ellipse2 {
+    width: 350px;
+    height: 150px;
+    background-color: rgba(0, 255, 0, 0.3);
+    animation-duration: 35s;
+    animation-direction: reverse;
+}
+
+.ellipse3 {
+    width: 150px; /* 세로 원 */
+    height: 350px; /* 세로 원 */
+    background-color: rgba(0, 0, 255, 0.3);
+    animation-duration: 45s;
+    animation-direction: normal;
+}
+
+.ellipse-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.image {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    z-index: 2;
+}
+
+.ellipse1 .image-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(160px);
+}
+.ellipse1 .image-2 {
+    transform: translate(-50%, -50%) rotate(72deg) translateX(160px);
+}
+.ellipse1 .image-3 {
+    transform: translate(-50%, -50%) rotate(144deg) translateX(160px);
+}
+.ellipse1 .image-4 {
+    transform: translate(-50%, -50%) rotate(216deg) translateX(160px);
+}
+.ellipse1 .image-5 {
+    transform: translate(-50%, -50%) rotate(288deg) translateX(160px);
+}
+
+.ellipse2 .image-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(160px);
+}
+.ellipse2 .image-2 {
+    transform: translate(-50%, -50%) rotate(72deg) translateX(160px);
+}
+.ellipse2 .image-3 {
+    transform: translate(-50%, -50%) rotate(144deg) translateX(160px);
+}
+.ellipse2 .image-4 {
+    transform: translate(-50%, -50%) rotate(216deg) translateX(160px);
+}
+.ellipse2 .image-5 {
+    transform: translate(-50%, -50%) rotate(288deg) translateX(160px);
+}
+
+.ellipse3 .image-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(160px);
+}
+.ellipse3 .image-2 {
+    transform: translate(-50%, -50%) rotate(180deg) translateY(160px);
+}
+
+@keyframes rotateEllipse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+`
+
+    </style>
+</head>
+<body>
+    <div class="ellipse-container">
+    <div class="ellipse ellipse1">
+        <div class="ellipse-line"></div>
+        <img src="2D/1.png" class="image image-1">
+        <img src="2D/2.png" class="image image-2">
+        <img src="2D/3.png" class="image image-3">
+        <img src="2D/4.png" class="image image-4">
+        <img src="2D/5.png" class="image image-5">
+    </div>
+    <div class="ellipse ellipse2">
+        <div class="ellipse-line"></div>
+        <img src="2D/6.png" class="image image-1">
+        <img src="2D/7.png" class="image image-2">
+        <img src="2D/8.png" class="image image-3">
+        <img src="2D/9.png" class="image image-4">
+        <img src="2D/10.png" class="image image-5">
+    </div>
+    <div class="ellipse ellipse3 fixed">
+        <div class="ellipse-line"></div>
+        <img src="2D/11.png" class="image image-1">
+        <img src="2D/12.png" class="image image-2">
+    </div>
+</div>
+
+</body>
+</html>

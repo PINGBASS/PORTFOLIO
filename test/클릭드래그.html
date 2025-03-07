@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 박스 & 새싹 물주기 애니메이션</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        
+
+        /* 새싹 애니메이션 */
+        .sprout-container {
+            position: relative;
+            width: 150px;
+            height: 200px;
+            background-color: transparent;
+        }
+
+        .sprout {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 10px;
+            height: 50px;
+            background-color: green;
+            border-radius: 5px;
+            transform: translateX(-50%);
+            transition: all 0.5s ease-out;
+        }
+
+        .water-can {
+            position: absolute;
+            bottom: 60px; /* */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.6);
+            animation: water-animation 2s infinite;
+        }
+
+        /* 물 뿌리기  */
+        @keyframes water-animation {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, 0) scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translate(-50%, -10px) scale(1.2);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, 0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+   
+    </div>
+
+  
+    <div class="sprout-container">
+        <div class="sprout"><img src="img/51.png"></div>
+        <div class="water-can"></div>
+    </div>
+
+    
+    </script>
+
+</body>
+</html>

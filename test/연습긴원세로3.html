@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ellipse-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.ellipse {
+  position: relative;
+  width: 600px;  /* 타원의 너비 */
+  height: 300px; /* 타원의 높이 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate-ellipse 10s linear infinite; /* 전체 회전 애니메이션 */
+}
+
+.ellipse .image {
+  position: absolute;
+  width: 50px;  /* 이미지 크기 */
+  height: 50px; /* 이미지 크기 */
+  object-fit: cover;
+}
+
+/* 타원형을 따라 회전하는 애니메이션 */
+@keyframes rotate-ellipse {
+  0% {
+    transform: rotate(0deg) translateX(300px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(300px) rotate(-360deg);
+  }
+}
+
+/* 각 이미지를 타원형 경로에 배치 */
+.image-1 {
+  transform: rotate(0deg) translateX(300px) rotate(0deg);
+}
+
+.image-2 {
+  transform: rotate(72deg) translateX(300px) rotate(-72deg); /* 72도씩 간격 */
+}
+
+.image-3 {
+  transform: rotate(144deg) translateX(300px) rotate(-144deg);
+}
+
+.image-4 {
+  transform: rotate(216deg) translateX(300px) rotate(-216deg);
+}
+
+.image-5 {
+  transform: rotate(288deg) translateX(300px) rotate(-288deg);
+}
+
+    </style>
+</head>
+<body>
+    <div class="ellipse-container">
+        <div class="ellipse">
+            <img src="2D/1.png" class="image image-1">
+            <img src="2D/2.png" class="image image-2">
+            <img src="2D/3.png" class="image image-3">
+            <img src="2D/4.png" class="image image-4">
+            <img src="2D/5.png" class="image image-5">
+        </div>
+    </div>
+    
+</body>
+</html>

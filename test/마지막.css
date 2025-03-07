@@ -1,0 +1,791 @@
+*{  box-sizing: border-box; margin: 0 auto; }
+*{  box-sizing: border-box; margin: 0 auto; }
+ul{ padding: 0; list-style: none; }
+a{  text-decoration: none; color: #000; }
+
+body{
+    position: relative;
+    background-color: #fff;
+    font-family: 'SUITE-Regular';
+    overflow-x: hidden;
+}
+
+/*첫번째섹션*/
+        .wrap{
+    position: relative;
+    /*max-width: 1440px;*/
+    background-color: #fff;
+    padding-top: 100vh;
+}
+
+.title{
+    color: #fff;
+}
+
+.parallax_ex{
+    position: relative;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: url(겨자꽃/66666666.jpg)no-repeat 0 0;
+    margin-top: 2vw;
+  
+    
+ 
+
+    
+}
+.sec1{
+  background: #000;
+}
+.flower1{
+    position: absolute;
+    top:10vw;
+    left:15vw;
+}
+.flower2{
+    position: absolute;
+    top:20vw;
+    left:30cap;
+}
+.flower3{
+    position: absolute;
+    top:40vw;
+    left:60vw;
+}
+.flower4{
+    position: absolute;
+    top:30vw;
+    left:72vw;
+}
+.parallax_txt1{
+    position: absolute;
+    top: 44%; 
+    left: 46%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    font-size: 3.5rem;
+    white-space: nowrap;
+    transition: 0.22s; 
+    color:/*#c5b4b4#929382;*/#636363;
+    font-weight: 500;
+  /*  opacity: 0;
+    animation: slideUp 2sease-out forwards;*/
+}
+
+.main{
+    position: relative;
+   /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;*/
+    background-color: #ffffff;
+    z-index: 5;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    z-index: 99;
+    font-size: 0;
+}
+
+.Self-introduction_1 img{
+  width:60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parallax_txt2{ 
+    position: absolute;
+    display: inline-block;
+    font-size: 40px;
+    transition: 0.5s ease;
+    color:#565656;
+    left: -70%; 
+    margin-top: 5vw;
+}
+.parallax_txt3{ 
+    position: absolute;
+    display: inline-block;
+    font-size: 40px;
+    transition: 0.5s ease;
+    color:#565656;
+    
+    top: 22%;
+}
+.parallax_txt4{ 
+    position: absolute;
+    display: inline-block;
+    font-size: 40px;
+    transition: 1s ease;
+    color:#565656;
+    top: 40%; left: 65%; 
+    opacity: 0; transform: translate(-50%, -50%); 
+}
+.parallax_txt5{
+    position: absolute;
+    display: inline-block;
+    font-size: 40px;
+    transition: 1.5s ease;
+    color:#565656;
+top: 100%;
+  left: 27.8%; 
+  transform: translate(-50%, 0);
+  opacity: 0;
+}
+
+span{
+  color:#565656;
+  font-size: 1.7rem;
+}
+
+/*꽃 차례때로-----------------------------------*/
+.image-container {
+           
+  position: relative;
+            margin-top:11vw;
+        }
+
+        .image-container img {
+            width: 150px; 
+            height: auto;
+            margin: 10px;
+            opacity: 0; 
+            transition: opacity 1s ease-in-out; 
+        }
+       
+.flower5{
+  position: absolute;
+  top:10vw;
+  left:27vw;
+}
+.flower9{
+  position: absolute;
+  top: 12vw;
+  left: 30vw;
+
+}
+.flower6{
+  position: absolute;
+  top: 17vw;
+    left: 51vw;
+}
+.flower7{
+  position: absolute;
+  top: 5vw;
+    left: 71vw;
+
+}
+.flower8{
+  position: absolute;
+  top: -2vw;
+    left: 35vw;
+}
+
+
+
+
+
+
+
+
+
+/*자기소개*/
+
+.Self-introduction_1, .Self-introduction_2, .self-bottom {
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: opacity 1s ease, transform 1s ease; 
+}
+
+
+.active {
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+
+.Self-introduction_1.active {
+  transition-delay: 0s; 
+}
+
+.Self-introduction_2.active {
+  transition-delay: 0.3s; 
+}
+
+.self-bottom.active {
+  transition-delay: 0.6s;
+  margin-left: 48vw;
+}
+/*라인*/
+
+#section4{
+  background: url(겨자꽃/66666666.jpg)no-repeat 0 0;
+}
+
+.section4_line {
+  opacity: 0;
+  transform: translateX(-100%); 
+  transition: transform 1s ease, opacity 1s ease; 
+}
+
+
+.active {
+  opacity: 1; 
+  transform: translateX(0); 
+}
+
+
+/*섹션------------------------------*/
+
+      nav {
+  background-color:/*#9ba7a0;#9ba7a0; #76877d;#c1c517; #9ba7a0; #282a0b ;  #e9da99;*/   #ffca00;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 80%;
+  z-index: 1000;
+  height: 1.5vw;
+}
+.nav_type{
+  color: #000000;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 10.1vw;
+  font-weight: 600;
+}
+
+
+
+#section4{
+    background:/*#9ba7a0;#d9d8a7; #76877d;#c1c517; #9ba7a0;#747836 #282a0b;  #e9da99;*/ #ffca00;
+    width: 71%;
+    margin-left: 30vw;
+
+   
+
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 8vw;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #525348;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+nav ul li a:hover{
+    color:#adadad;
+}
+
+
+
+
+/*image-container*/
+section {
+
+  height: 100vh;
+}
+
+.sec1{
+  background-color: #ffca2d;
+}
+
+.section2{
+  background-color: #ffffff;
+}
+.scroll-box {
+  width: 20vw;           
+  height: 500px;         
+  overflow-y: auto;       
+ 
+}
+
+
+.scroll-box img {
+  width: 25vw;            
+  height: auto;          
+}
+
+
+.scroll-box::-webkit-scrollbar {
+  display: none; 
+}
+
+
+
+
+
+
+
+
+section:nth-child(2){
+  background-color: #ffa500;
+}
+
+
+
+section:nth-child(4){
+  background-color: #fff;
+}
+
+section:nth-child(5){
+  background-color: #fff;
+}
+
+section:nth-child(6){
+  background-color: #1e1e1e;
+}
+section:nth-child(7){
+  background-color: #fff;
+  color:#d7263d;
+  color:#8c1eff;
+  color:#ffa500;
+  color:
+}
+
+
+.section22{
+    background:#333;
+}
+
+/*무한반복-------------------------------------------*/
+
+
+
+.skills-section {
+  position: relative;
+  
+  overflow: hidden; 
+  background-color: #fffef5;
+  margin:0 auto;
+  height: 27vw;
+}
+.skill img{
+  margin-top:17vw;
+}
+.skills-wrapper {
+  display: flex;
+  animation: scroll-left 20s linear infinite; 
+}
+
+.skill {
+  flex: 0 0 auto; 
+  height: 200px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  margin-left:2vw;
+}
+
+.skill img {
+  width: 80px; 
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.skill p {
+  font-size: 14px;
+  color: #333;
+}
+
+
+@keyframes scroll-left {
+  0% {
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
+
+
+
+
+.section_type{
+    margin:0 auto;
+    margin-top: 30vw;
+    margin-left: 6vw;
+   
+    
+}
+.section_type1{
+  font-weight: 600;
+    text-align: center;
+    color:#2e2e2e;
+    font-size:1.2rem;
+    text-align: left;
+}
+.section_type2{
+  margin-top: 10vw;
+   text-align: center;
+  color: #2e2e2e;
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 700;
+
+}
+.section_type3{
+
+    text-align: center;
+    color: #2e2e2e;
+    font-size: 4.5rem;
+    text-align: left;
+    font-weight: 700;
+
+}
+.section_type4{
+
+  color: #2e2e2e;
+  font-size: 2rem;
+  text-align: left;
+  font-weight: 500;
+
+}
+.section4_line {
+  width: 50%;
+  height: 3px;
+  background-color: #2e2e2e;
+ /* transition: width 10s ease-in-out;*/
+}
+.section4_type{
+  padding: 18vw 0 0 6vw;
+  line-height: 1.2;
+  
+}
+.section4_type1{
+  font-weight: 600;
+    text-align: center;
+    color:#2e2e2e;
+    font-size:1.2rem;
+    text-align: left;
+}
+.section4_type2{
+  margin-top: 0.5vw;
+   text-align: center;
+  color: #2e2e2e;
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 700;
+
+}
+.section4_type3{
+
+    text-align: center;
+    color: #2e2e2e;
+    font-size: 4.5rem;
+    text-align: left;
+    font-weight: 700;
+
+}
+.section4_type4{
+
+  color: #2e2e2e;
+  font-size: 2rem;
+  text-align: left;
+  font-weight: 500;
+
+}
+
+.section4_line.show {
+  margin-right: 43vw;
+  width: 42.2%;
+  margin-top: 0.4vw;
+    margin-bottom: 0.3vw;
+
+  
+
+}
+.section4_type5{
+  line-height: 3.5vw;
+}
+
+/*무한반복 end=============================================*/
+
+
+/*흩날리는 꽃 start-----------------------------------------*/
+
+
+.image-container1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.flower55, .flower88 {
+  position: absolute;
+  width: 10vw; 
+  height: 10vw;
+  background-size: cover;
+  animation: move 10s linear infinite, spin 5s linear infinite;
+ 
+}
+
+.flower88 {
+  position: absolute;
+  width: 6vw; 
+  height: 6vw;
+  background-size: cover;
+  animation: move 10s linear infinite, spin 5s linear infinite;
+  
+}
+
+
+.flower99 {
+  position: absolute;
+  width: 6vw; 
+  height: 6vw;
+  background-size: cover;
+  animation: move2 10s linear infinite, spin2 5s linear infinite;
+}
+
+.flower66 {
+  position: absolute;
+  width: 6vw; 
+  height: 6vw;
+  background-size: cover;
+  animation: move2 10s linear infinite, spin2 5s linear infinite;
+}
+
+.flower77 {
+  position: absolute;
+  width: 6vw; 
+  height: 6vw;
+  background-size: cover;
+  animation: move3 10s linear infinite, spin3 20s linear infinite;
+}
+/* 각 꽃의 초기 위치 및 애니메이션 지연 */
+.flower55 {
+  top: 10vw;
+  left: 10vw;
+  animation-delay: 0s;
+  
+}
+
+.flower66 {
+  top: 24vw;
+  left: 37vw;
+  animation-delay: 1s;
+}
+
+.flower77 {
+  top: -99px;
+  left: 37%;
+  animation-delay: 2s;
+}
+
+.flower88 {
+  top: 50px;
+  left: 70%;
+  animation-delay: 3s;
+}
+.flower99 {
+  top: 5vw;
+  left: 60vw;
+  animation-delay: 0s;
+}
+
+
+@keyframes move {
+  0% {
+      transform: translate(0, 0);
+  }
+  25% {
+      transform: translate(30px, 100px) rotate(20deg); /* 오른쪽 위로 이동하고 회전 */
+  }
+  50% {
+      transform: translate(60px, 200px) rotate(40deg); /* 더 멀리 떨어지며 회전 */
+  }
+  75% {
+      transform: translate(90px, 300px) rotate(60deg); /* 아래쪽으로 이동하며 회전 */
+  }
+  100% {
+      transform: translate(120px, 400px) rotate(80deg); /* 계속 떨어지며 회전 */
+  }
+}
+
+
+@keyframes move2 {
+  0% {
+      transform: translate(0, 0);
+  }
+  25% {
+      transform: translate(100px, 100px) rotate(20deg); /* 오른쪽 위로 이동하고 회전 */
+  }
+  50% {
+      transform: translate(150px, 200px) rotate(40deg); /* 더 멀리 떨어지며 회전 */
+  }
+  75% {
+      transform: translate(200px, 300px) rotate(60deg); /* 아래쪽으로 이동하며 회전 */
+  }
+  100% {
+      transform: translate(100px, 100px) rotate(80deg); /* 계속 떨어지며 회전 */
+  }
+}
+
+@keyframes move3 {
+  0% {
+      transform: translate(0, 0);
+  }
+  25% {
+      transform: translate(30px, 100px) rotate(20deg); /* 오른쪽 위로 이동하고 회전 */
+  }
+  50% {
+      transform: translate(60px, 200px) rotate(40deg); /* 더 멀리 떨어지며 회전 */
+  }
+  75% {
+      transform: translate(90px, 300px) rotate(60deg); /* 아래쪽으로 이동하며 회전 */
+  }
+  100% {
+      transform: translate(120px, 400px) rotate(80deg); /* 계속 떨어지며 회전 */
+  }
+}
+
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg); /* 꽃이 한 바퀴 회전 */
+  }
+}
+
+
+@keyframes spin2 {
+  0% {
+      opacity: 1;
+      transform: translate(-100%, 0) scale(1) ;
+  }
+  50% {
+      opacity: 0.5;
+      transform: translate(-100%, -10px) scale(1.2);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(-100%, 0) scale(1);
+  }
+}
+@keyframes spin3 {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg); /* 꽃이 한 바퀴 회전 */
+  }
+}
+/*흩날리는 꽃=======end======================================*/
+
+/*자기소개섹션------------------------------------------------*/
+
+
+
+/*자기소개섹션--------------end-----------------------------------------------*/
+.self-top{
+  display:flex;
+  margin-left: 17vw;
+
+}
+
+.Self-introduction_2{
+  width: 62vw;
+
+}
+.self_type1{
+  color:#000;
+  font-size:1rem;
+}
+.self_type2{
+  color:#000;
+  font-size:1rem;
+  margin-top: 3vw;
+
+}
+.seft_type3{
+  color:#000;
+  font-size:1rem;
+  margin-top:2vw;
+}
+/*box 프로젝트섹션*/
+.Self-introduction_3{
+  margin-top:3vw;
+}
+
+.self-bottom_1{
+  color:#000;
+  font-size:1rem;
+  text-align: left;
+}
+.self-bottom_2{
+  color:#000;
+  font-size:1rem;
+  text-align: center;
+}
+
+.self-bottom_3{
+  color:#000;
+  font-size:1rem;
+  text-align: center;
+}
+
+
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 78vw;
+  margin-top:5vw;
+}
+
+.box {
+  width: 32%;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(100px); 
+  transition: opacity 2s, transform 3s; 
+}
+
+.box1 {
+  background-color: rgba(240, 240, 240, 0.6);
+}
+
+.box2 {
+  background-color: rgba(240, 240, 240, 0.6);
+}
+
+.box3 {
+  background-color: rgba(240, 240, 240, 0.6);
+}

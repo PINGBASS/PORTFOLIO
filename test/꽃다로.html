@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꽃 이미지</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flower5, .flower6, .flower7, .flower8 {
+            position: absolute;
+            width: 50px; /* 꽃 이미지 크기 조정 */
+            height: 50px;
+            animation: move 5s infinite;
+            background-size: cover;
+        }
+
+        .flower5 {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .flower6 {
+            top: 40%;
+            left: 30%;
+            animation-delay: 1s;
+        }
+
+        .flower7 {
+            top: 60%;
+            left: 50%;
+            animation-delay: 2s;
+        }
+
+        .flower8 {
+            top: 80%;
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(20px, -20px);
+            }
+            50% {
+                transform: translate(40px, 0);
+            }
+            75% {
+                transform: translate(20px, 20px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/ddddff.png" alt="Image 1" class="flower5">
+        <img src="img/dddds.png" alt="Image 2" class="flower6">
+        <img src="img/ddddf.png" alt="Image 3" class="flower7">
+        <img src="img/ddddss.png" alt="Image 4" class="flower8">
+    </div>
+</body>
+</html>

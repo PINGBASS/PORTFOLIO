@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 애니메이션</title>
+    <script>
+window.addEventListener('scroll', function () {
+    const texts = document.querySelectorAll('.scroll-text1');
+    const scrollPosition = window.scrollY + window.innerHeight; 
+
+    texts.forEach(function (text, index) {
+        if (text.offsetTop < scrollPosition) {
+           
+            setTimeout(function() {
+                text.classList.add('show');
+            }, index * 500); 
+        }
+    });
+});
+
+
+    </script>
+    <style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.content1 {
+    padding-top: 100px;
+    text-align: center;
+    height: 200vh;
+}
+
+.scroll-text1 {
+    opacity: 0;
+    transform: translateX(100px); 
+    margin-bottom: 30px;
+  
+}
+
+#text2 {
+    transform: translateX(-100px); 
+}
+
+#text3 {
+    transform: translateX(100px); 
+}
+
+#text4 {
+    transform: translateY(100px); 
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+
+    </style>>
+</head>
+<body>
+    <div class="content1">
+        <p class="scroll-text1" id="text1">첫 번째 문장이 왼쪽에서 나옵니다.</p>
+        <p class="scroll-text1" id="text2">두 번째 문장이 오른쪽에서 나옵니다.</p>
+        <p class="scroll-text1" id="text3">세 번째 문장이 왼쪽에서 나옵니다.</p>
+        <p class="scroll-text1" id="text4">네 번째 문장이 아래에서 올라옵니다.</p>
+    </div>
+
+
+    
+</body>
+
+
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 박스</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .slider-container {
+            width: 60vw; 
+            height: 25vw;
+            overflow: hidden; 
+            border: 2px solid #ddd;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        /* 상자들 */
+        .box-container {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .box {
+            width: 20vw;
+            height: 25vw;
+            background-color: rgba(0, 123, 255, 0.6);
+            margin: 0 10px;
+            border-radius: 10px;
+        }
+
+        /* 상자의 색상 */
+        .box1 { background-color: rgba(255, 0, 0, 0.6); }
+        .box2 { background-color: rgba(0, 255, 0, 0.6); }
+        .box3 { background-color: rgba(0, 0, 255, 0.6); }
+        .box4 { background-color: rgba(255, 255, 0, 0.6); }
+        .box5 { background-color: rgba(255, 0, 255, 0.6); }
+        .box6 { background-color: rgba(0, 255, 255, 0.6); }
+        .box7 { background-color: rgba(128, 128, 128, 0.6); }
+    </style>
+</head>
+<body>
+
+    <!-- 슬라이더 컨테이너 -->
+    <div class="slider-container" id="slider-container">
+        <div class="box-container" id="box-container">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+            <div class="box box6"></div>
+            <div class="box box7"></div>
+        </div>
+    </div>
+
+    <script>
+        const boxContainer = document.getElementById('box-container');
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        // 마우스 다운 시 드래그 시작
+        boxContainer.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX - boxContainer.offsetLeft; // 마우스
+            scrollLeft = boxContainer.scrollLeft; //  스크롤 위치
+            document.body.style.cursor = 'grabbing';  // 커서 변경
+        });
+
+        // 마우스 움직일 때 박스 이동
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const moveX = e.pageX - startX; // 이동 거리 
+            boxContainer.style.transform = `translateX(${scrollLeft - moveX}px)`; // 박스 이동
+        });
+
+        // 마우스 놓으면 드래그 종료
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            document.body.style.cursor = 'default';  // 커서 원래 상태로
+        });
+
+        // 모바일 터치 이벤트 처리
+        boxContainer.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            const touch = e.touches[0];
+            startX = touch.pageX - boxContainer.offsetLeft;
+            scrollLeft = boxContainer.scrollLeft;
+        });
+
+        // 터치로 드래그할 때
+        document.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const touch = e.touches[0];
+            const moveX = touch.pageX - startX;
+            boxContainer.style.transform = `translateX(${scrollLeft - moveX}px)`;
+        });
+
+        // 터치 종료 시
+        document.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+    </script>
+
+</body>
+</html>

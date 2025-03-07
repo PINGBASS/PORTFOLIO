@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style for the container holding all the ellipses */
+.ellipse-container {
+    display: flex;
+    justify-content: center; /* Center align all ellipses horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+    height: 600px; /* Ensure enough space for all ellipses */
+}
+
+/* Style for the ellipse container */
+.ellipse {
+    position: absolute; /* Absolute positioning to avoid overlap */
+    border-radius: 50%; /* Creates an elliptical shape */
+    animation: rotateEllipse 20s infinite linear; /* Slower animation */
+    margin: 0 auto;
+}
+
+/* Individual ellipse sizes (more elongated ovals) */
+.ellipse1 {
+    width: 650px; /* Larger width for ellipse1 */
+    height: 250px; /* Smaller height for ellipse1 */
+    background-color: rgba(255, 0, 0, 0.3); /* Red color for ellipse1 */
+    animation-duration: 30s; /* Very slow rotation for ellipse1 */
+    animation-direction: normal; /* Clockwise rotation */
+}
+
+.ellipse2 {
+    width: 600px; /* Medium width for ellipse2 */
+    height: 200px; /* Smaller height for ellipse2 */
+    background-color: rgba(0, 255, 0, 0.3); /* Green color for ellipse2 */
+    animation-duration: 25s; /* Slow rotation for ellipse2 */
+    animation-direction: reverse; /* Counter-clockwise rotation */
+}
+
+.ellipse3 {
+    width: 550px; /* Smaller width for ellipse3 */
+    height: 180px; /* Smaller height for ellipse3 */
+    background-color: rgba(0, 0, 255, 0.3); /* Blue color for ellipse3 */
+    animation-duration: 35s; /* Slowest rotation for ellipse3 */
+    animation-direction: normal; /* Clockwise rotation */
+}
+
+/* The line representing the elliptical path */
+.ellipse-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #000; /* Dashed line to represent the elliptical path */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style for the images inside the ellipse */
+.image {
+    position: absolute;
+    width: 50px; /* Adjust image size */
+    height: 50px; /* Adjust image size */
+    top: 50%; /* Position the images vertically centered */
+    left: 50%; /* Position the images horizontally centered */
+    transform-origin: 50% 50%; /* Ensure rotation happens around the center */
+}
+
+/* Position the images around the ellipse for ellipse1 */
+.ellipse1 .image-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(250px);
+}
+.ellipse1 .image-2 {
+    transform: translate(-50%, -50%) rotate(72deg) translateX(250px);
+}
+.ellipse1 .image-3 {
+    transform: translate(-50%, -50%) rotate(144deg) translateX(250px);
+}
+.ellipse1 .image-4 {
+    transform: translate(-50%, -50%) rotate(216deg) translateX(250px);
+}
+.ellipse1 .image-5 {
+    transform: translate(-50%, -50%) rotate(288deg) translateX(250px);
+}
+
+/* Position the images around the ellipse for ellipse2 */
+.ellipse2 .image-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(210px);
+}
+.ellipse2 .image-2 {
+    transform: translate(-50%, -50%) rotate(72deg) translateX(210px);
+}
+.ellipse2 .image-3 {
+    transform: translate(-50%, -50%) rotate(144deg) translateX(210px);
+}
+.ellipse2 .image-4 {
+    transform: translate(-50%, -50%) rotate(216deg) translateX(210px);
+}
+.ellipse2 .image-5 {
+    transform: translate(-50%, -50%) rotate(288deg) translateX(210px);
+}
+
+/* Position the images around the ellipse for ellipse3 */
+.ellipse3 .image-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(160px);
+}
+.ellipse3 .image-2 {
+    transform: translate(-50%, -50%) rotate(180deg) translateX(160px);
+}
+
+/* Animation for rotating the images around the ellipse */
+@keyframes rotateEllipse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="ellipse-container">
+        <div class="ellipse ellipse1">
+            <div class="ellipse-line"></div>
+            <img src="2D/1.png" class="image image-1">
+            <img src="2D/2.png" class="image image-2">
+            <img src="2D/3.png" class="image image-3">
+            <img src="2D/4.png" class="image image-4">
+            <img src="2D/5.png" class="image image-5">
+        </div>
+        <div class="ellipse ellipse2">
+            <div class="ellipse-line"></div>
+            <img src="2D/6.png" class="image image-1">
+            <img src="2D/7.png" class="image image-2">
+            <img src="2D/8.png" class="image image-3">
+            <img src="2D/9.png" class="image image-4">
+            <img src="2D/10.png" class="image image-5">
+        </div>
+        <div class="ellipse ellipse3">
+            <div class="ellipse-line"></div>
+            <img src="2D/11.png" class="image image-1">
+            <img src="2D/12.png" class="image image-2">
+        </div>
+    </div>
+    
+</body>
+</html>

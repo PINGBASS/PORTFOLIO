@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>꽃잎 흩날리는 효과</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #f0f0f0;
+    }
+
+    .petal {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('겨자꽃/51.jpg') no-repeat center center;
+      background-size: cover;
+      animation: fall 5s linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -10%;
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+      100% {
+        top: 100%;
+        opacity: 0;
+        transform: rotate(720deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function createPetal() {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * window.innerWidth + 'px';
+      petal.style.animationDuration = Math.random() * 5 + 5 + 's'; 
+      petal.style.animationDelay = Math.random() * 5 + 's'; 
+      document.body.appendChild(petal);
+
+      petal.addEventListener('animationend', () => {
+        petal.remove();
+      });
+    }
+
+
+    setInterval(createPetal, 200);
+  </script>
+</body>
+</html>

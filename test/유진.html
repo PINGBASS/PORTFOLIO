@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글씨 써지는 효과</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end; /* 오른쪽 정렬 */
+            align-items: center;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .text-container {
+            font-size: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            text-align: right;
+            color: #333;
+        }
+
+        .line {
+            display: block;
+            opacity: 0;
+            animation: typing 4s steps(30) forwards;
+        }
+
+        .line:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .line:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .line:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+            to {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <div class="line">웹으로 일상에 작은 휴식을</div>
+        <div class="line">선물하는 웹퍼블리셔</div>
+        <div class="line">백유진입니다</div>
+    </div>
+</body>
+</html>

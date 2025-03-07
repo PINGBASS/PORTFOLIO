@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한 글자씩 써지는 효과</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .text-container {
+            font-size: 30px;
+            display: inline-block;
+            text-align: right;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        .line {
+            display: block;
+            margin: 0;
+        }
+
+        .line span {
+            display: inline-block;
+            opacity: 0;
+            animation: typing 1s steps(1) forwards;
+        }
+
+       
+        .line:nth-child(1) span {
+            animation-delay: 0s;
+        }
+
+        .line:nth-child(2) span {
+            animation-delay: 4s;
+        }
+
+        .line:nth-child(3) span {
+            animation-delay: 8s;
+        }
+
+        @keyframes typing {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+       
+        .space {
+            display: inline-block;
+            width: 10px; 
+            animation-delay: 0s; 
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <div class="line">
+            <!-- 첫 번째 줄의 글자들을 span으로 감싸서 각각 애니메이션을 적용 -->
+            <span style="animation-delay: 0s">웹</span>
+            <span style="animation-delay: 0.2s">으로</span>
+            <span class="space"></span> 
+            <span style="animation-delay: 0.4s">일</span>
+            <span style="animation-delay: 0.6s">상</span>
+            <span class="space"></span> 
+            <span style="animation-delay: 0.8s">에</span>
+            <span class="space"></span> 
+            <span style="animation-delay: 1s">작</span>
+            <span style="animation-delay: 1.2s">은</span>
+            <span class="space"></span> 
+            <span style="animation-delay: 1.4s">휴</span>
+            <span style="animation-delay: 1.6s">식</span>
+            <span style="animation-delay: 1.8s">을</span>
+        </div>
+        <div class="line">
+            <span style="animation-delay: 2s">선</span>
+            <span style="animation-delay: 2.2s">물</span>
+            <span style="animation-delay: 2.4s">하</span>
+            <span style="animation-delay: 2.6s">는</span>
+            <span class="space"></span> 
+            <span style="animation-delay: 2.8s">웹</span>
+            <span style="animation-delay: 3s">퍼</span>
+            <span style="animation-delay: 3.2s">블</span>
+            <span style="animation-delay: 3.4s">리</span>
+            <span style="animation-delay: 3.6s">셔</span>
+        </div>
+        <div class="line">
+            <span style="animation-delay: 3.8s">백</span>
+            <span style="animation-delay: 4s">유</span>
+            <span style="animation-delay: 4.2s">진</span>
+            <span style="animation-delay: 4.4s">입</span>
+            <span style="animation-delay: 4.6s">니</span>
+            <span style="animation-delay: 4.8s">다</span>
+        </div>
+    </div>
+</body>
+</html>

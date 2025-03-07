@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>섹션 및 네비게이션 예제</title>
+  <style>
+    /* 기본 스타일 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* 섹션의 스타일 */
+section {
+  height: 1080px;  
+  box-sizing: border-box;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+/* 섹션 배경 색상 */
+#section1 { background-color: #161616; }
+#section2 { background-color: #161616; }
+#section3 { background-color: #161616;  }
+#section4 { background-color: #161616;  }
+#section5 { background-color: #161616; }
+#section6 { background-color: #161616;  }
+
+
+nav {
+  position: absolute;
+  top: calc(1080px * 3); 
+  left:50%;
+  transform: translate(-50%,-50%); 
+
+  padding: 10px 0;
+ 
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;  
+  text-align: center;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: rgb(255, 213, 0);
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px 20px;
+}
+
+  </style>
+</head>
+<body>
+  
+  <!-- 섹션들 -->
+  <section id="section1">섹션 1</section>
+  <section id="section2">섹션 2</section>
+  <section id="section3">섹션 3</section>
+
+  <!-- 섹션 3  밑 네비 -->
+  <nav>
+    <ul>
+      <li><a href="#section1">섹션 1</a></li>
+      <li><a href="#section2">섹션 2</a></li>
+      <li><a href="#section3">섹션 3</a></li>
+      <li><a href="#section4">섹션 4</a></li>
+      <li><a href="#section5">섹션 5</a></li>
+      <li><a href="#section6">섹션 6</a></li>
+    </ul>
+  </nav>
+
+  <!-- 나머지 섹션들 -->
+  <section id="section4">섹션 4</section>
+  <section id="section5">섹션 5</section>
+  <section id="section6">섹션 6</section>
+
+ 
+</body>
+<script>
+
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    window.scrollTo({
+      top: targetSection.offsetTop - 50,  
+      behavior: 'smooth'
+    });
+  });
+});
+
+</script>
+</html>

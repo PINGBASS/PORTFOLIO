@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기 상태: 각 요소를 화면 밖으로 숨깁니다. */
+.Self-introduction_1, .Self-introduction_2, .self-bottom {
+  opacity: 0;
+  transform: translateX(100%); /* 기본적으로 오른쪽으로 숨깁니다 */
+}
+
+.Self-introduction_2 {
+  transform: translateX(-100%); /* self-introduction_2는 기본적으로 왼쪽으로 숨깁니다 */
+}
+
+.self-bottom {
+  transform: translateY(100%); /* self-bottom은 아래에서 위로 올라옵니다 */
+}
+
+/* 애니메이션을 트리거하는 클래스 (스크롤로 활성화) */
+.active {
+  opacity: 1;
+  transform: translateX(0); /* 기본 위치로 돌아옵니다 */
+  transition: all 1s ease; /* 1초 동안 애니메이션 */
+}
+
+.active-bottom {
+  opacity: 1;
+  transform: translateY(0); /* 아래에서 위로 올라옵니다 */
+  transition: all 1s ease; /* 1초 동안 애니메이션 */
+}
+</style>
+</head>
+<body>
+    <div class="self-top">
+        <div class="Self-introduction_1">
+          <img src="img/증명사진.jpg" alt="자기소개 이미지">
+        </div>
+        <div class="Self-introduction_2">
+          <h2 class="self_type1"></h2>
+          <p class="self_type2">
+            이제는 이주노동자문제에 대해서 많은 사람들이 다양한 얘기를 하고 있다. ...
+          </p>
+          <a href="#" class="seft_type3">더보기</a>
+        </div>
+      </div>
+      
+      <div class="self-bottom">
+        <div class="Self-introduction_3">
+          <p class="self-bottom_1">2021년 12월 5일 ~ 2023년 9월 30일</p>
+          <p class="self-bottom_1">2021년 12월 5일 ~ 2023년 9월 30일</p>
+          <p class="self-bottom_1">2021년 12월 5일 ~ 2023년 9월 30일</p>
+        </div>
+        <div class="Self-introduction_4">
+          <p class="self-bottom_2">2021년 12월 5일 ~ 2023년 9월 30일</p>
+          <p class="self-bottom_2">2021년 12월 5일 ~ 2023년 9월 30일</p>
+          <p class="self-bottom_2">2021년 12월 5일 ~ 2023년 9월 30일</p>
+        </div>
+      </div>
+      
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  // Intersection Observer 설정
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5 // 50%가 보일 때 애니메이션 시작
+  };
+
+  // 각 요소들에 대해 애니메이션을 적용할 observer 생성
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('Self-introduction_1')) {
+          entry.target.classList.add('active'); // 오른쪽에서 왼쪽
+        } else if (entry.target.classList.contains('Self-introduction_2')) {
+          entry.target.classList.add('active'); // 왼쪽에서 오른쪽
+        } else if (entry.target.classList.contains('self-bottom')) {
+          entry.target.classList.add('active-bottom'); // 아래에서 위로 올라오기
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  // 각 요소를 관찰
+  const selfIntroduction1 = document.querySelector('.Self-introduction_1');
+  const selfIntroduction2 = document.querySelector('.Self-introduction_2');
+  const selfBottom = document.querySelector('.self-bottom');
+
+  observer.observe(selfIntroduction1);
+  observer.observe(selfIntroduction2);
+  observer.observe(selfBottom);
+});
+
+</script>
+</html>

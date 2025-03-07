@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연필</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        #text {
+            font-size: 40px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid black; 
+            padding-right: 5px;
+        }
+
+     
+        @keyframes draw {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+       
+        #text {
+            animation: draw 4s steps(20) 1s forwards; 
+        }
+    </style>
+</head>
+<body>
+
+<div id="text">beak yu jin</div>
+
+</body>
+</html>

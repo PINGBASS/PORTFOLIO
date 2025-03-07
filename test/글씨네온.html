@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+   
+    </script>
+    <style>
+
+
+@import url(https://fonts.bunny.net/css?family=audiowide:400);
+
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+@property --x {
+	syntax: "<percentage>";
+	initial-value: 0%;
+	inherits: false;
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	min-height: 100svh;
+	background-color: black;
+	display: grid;
+	place-content: center;
+	font-family: system-ui;
+	color: white;
+}
+
+h1 {
+	--rotate-speed: 4s;
+	--move-speed: 8s;
+	--gradient: conic-gradient(
+		from var(--angle) at var(--x) -20px,
+		red,
+		orange,
+		yellow,
+		green,
+		blue,
+		indigo,
+		violet,
+		red
+	);
+
+	position: relative;
+	font-family: "Audiowide", display;
+	text-transform: lowercase;
+	font-size: clamp(4rem, 12vw + 0.04rem, 16rem);
+	background-image: var(--gradient);
+	background-size: 150%;
+	color: transparent;
+	background-clip: text;
+	animation-name: rotate, move;
+	animation-duration: var(--rotate-speed), var(--move-speed);
+	animation-timing-function: linear, ease-in-out;
+	animation-iteration-count: infinite, infinite;
+	animation-direction: normal, alternate;
+}
+h1::before,
+h1::after {
+	content: attr(data-title);
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	font-size: inherit;
+	background: inherit;
+
+	z-index: -1;
+	translate: 0 15px;
+	opacity: 0.45;
+}
+h1::after {
+	translate: 0 30px;
+	z-index: -2;
+	opacity: 0.35;
+}
+
+@keyframes rotate {
+	from {
+		--angle: 0deg;
+	}
+	to {
+		--angle: 360deg;
+	}
+}
+@keyframes move {
+	from {
+		--x: 0%;
+	}
+	to {
+		--x: 100%;
+	}
+}
+
+
+
+    </style>
+</head>
+<body>
+  
+      <h1 data-title="Dance!">Dance!</h1>
+</body>
+
+
+</html>

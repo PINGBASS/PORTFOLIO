@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .blinking-text {
+            font-size: 40px;
+            color: #000;
+            animation: blink-animation 2s ease-in-out infinite;
+        }
+
+        @keyframes blink-animation {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <title>깜빡이는 글씨</title>
+</head>
+<body>
+    <div class="blinking-text"> 깜빡깜빡깜빡!</div>
+</body>
+</html>

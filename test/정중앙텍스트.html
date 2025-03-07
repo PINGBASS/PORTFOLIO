@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* 전체 섹션 */
+.section {
+  position: relative;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 배경 텍스트 */
+.background-text {
+  position: fixed; }
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 5rem; 
+  font-weight: bold; 
+  z-index: -1; 
+  pointer-events: none; 
+  line-height: 1.2; 
+}
+
+/* 두 번째 섹션부터 글씨 크기와 스타일 조정 */
+.section:nth-child(2) .background-text {
+  font-size: 6rem; 
+  color: rgba(255, 255, 255, 0.3); 
+}
+
+.section:nth-child(3) .background-text {
+  font-size: 7rem; /
+  color: rgba(255, 255, 255, 0.4); 
+}
+
+.section:nth-child(4) .background-text {
+  font-size: 8rem; 
+  color: rgba(255, 255, 255, 0.5); 
+}
+
+.section:nth-child(5) .background-text {
+  font-size: 9rem; 
+  color: rgba(255, 255, 255, 0.6); }
+
+.section:nth-child(6) .background-text {
+  font-size: 10rem; 
+  color: rgba(255, 255, 255, 0.7); }
+.section1{
+    background:rgb(248, 248, 248);
+}
+.section2{
+    background:#c7c41b;
+}
+.section3{
+    background:#432;
+}
+.section4{
+    background:#c7c41b;
+}
+.section5{
+    background:#432;
+}
+
+
+
+
+
+/*첫배경 그라데이션*/
+.text-container {
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 96px;
+    color: white;
+    opacity: 0.8;
+    user-select: none;
+    text-shadow: 1px 1px rgba(0,0,0,0.1);
+  }
+  
+  :root {
+    --color-bg1: rgb(253 183 255);
+    --color-bg2: rgb(123 66 213);
+    --color1: 253 183 255;
+    --color2: 242, 0, 250;
+    --color3: 174, 0, 255;
+    --color4: 255, 254, 195;
+    --color5: 168, 85,247;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 80%;
+    --blending: hard-light;
+  }
+  
+  @keyframes moveInCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes moveVertical {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  
+  @keyframes moveHorizontal {
+    0% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+      transform: translateX(50%) translateY(10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+  }
+  
+  
+  .gradient-bg {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    top: 0;
+    left: 0;
+  
+    svg {
+      position: fixed;
+      top:0;
+      left:0;
+      width: 0;
+      height: 0;
+    }
+  
+  
+    .gradients-container {
+      filter: url(#goo) blur(40px) ;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .g1 {
+      position: absolute;
+      background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+      mix-blend-mode: var(--blending);
+  
+      width: var(--circle-size);
+      height: var(--circle-size);
+      top: calc(50% - var(--circle-size) / 2);
+      left: calc(50% - var(--circle-size) / 2);
+  
+      transform-origin: center center;
+      animation: moveVertical 30s ease infinite;
+  
+      opacity: 1;
+    }
+  
+    .g2 {
+      position: absolute;
+      background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+      mix-blend-mode: var(--blending);
+  
+      width: var(--circle-size);
+      height: var(--circle-size);
+      top: calc(50% - var(--circle-size) / 2);
+      left: calc(50% - var(--circle-size) / 2);
+  
+      transform-origin: calc(50% - 400px);
+      animation: moveInCircle 20s reverse infinite;
+  
+      opacity: 1;
+    }
+  
+    .g3 {
+      position: absolute;
+      background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+      mix-blend-mode: var(--blending);
+  
+      width: var(--circle-size);
+      height: var(--circle-size);
+      top: calc(50% - var(--circle-size) / 2 + 200px);
+      left: calc(50% - var(--circle-size) / 2 - 500px);
+  
+      transform-origin: calc(50% + 400px);
+      animation: moveInCircle 40s linear infinite;
+  
+      opacity: 1;
+    }
+  
+    .g4 {
+      position: absolute;
+      background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+      mix-blend-mode: var(--blending);
+  
+      width: var(--circle-size);
+      height: var(--circle-size);
+      top: calc(50% - var(--circle-size) / 2);
+      left: calc(50% - var(--circle-size) / 2);
+  
+      transform-origin: calc(50% - 200px);
+      animation: moveHorizontal 40s ease infinite;
+  
+      opacity: 0.7;
+    }
+  
+    .g5 {
+      position: absolute;
+      background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+      mix-blend-mode: var(--blending);
+  
+      width: calc(var(--circle-size) * 2);
+      height: calc(var(--circle-size) * 2);
+      top: calc(50% - var(--circle-size));
+      left: calc(50% - var(--circle-size));
+  
+      transform-origin: calc(50% - 800px) calc(50% + 200px);
+      animation: moveInCircle 20s ease infinite;
+  
+      opacity: 1;
+    }
+  
+    .interactive {
+      position: absolute;
+      background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+      mix-blend-mode: var(--blending);
+  
+      width: 100%;
+      height: 100%;
+      top: -50%;
+      left: -50%;
+  
+      opacity: 0.7;
+    }
+  }
+    </style>
+</head>
+<body>
+  
+    <section class="section section1">
+        <div class="background-text">
+          디자인을 통해 세상과 소통하는 사람입니다.
+        </div>
+      </section>
+      
+      <section class="section section2">
+        <div class="background-text">
+          사용자의 경험을 최우선으로, 웹의 언어로 이야기합니다.
+        </div>
+      </section>
+      
+      <section class="section section3">
+        <div class="background-text">
+          기술과 창의성의 조화를 통해 아름다움과 효율성을 만듭니다.
+        </div>
+      </section>
+      
+      <section class="section section4">
+        <div class="background-text">
+          매일 새로운 도전이, 나를 더욱 성장하게 만듭니다.
+        </div>
+      </section>
+      
+      <section class="section section5">
+        <div class="background-text">
+          세상을 바꾸는 웹을 만들기 위해, 나는 오늘도 디자인합니다.
+        </div>
+      </section>
+      
+      <section class="section section6">
+        <div class="background-text">
+          혁신적인 생각과 디자인으로 차이를 만들어갑니다.
+        </div>
+      </section>
+
+      <section class="section section7">
+        <div class="background-text">
+         
+        </div>
+      </section>
+      
+      
+      
+</body>
+</html>

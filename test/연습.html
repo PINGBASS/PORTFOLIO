@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="연습.css">
+    <style>
+        /* Style for the ellipse container */
+.ellipse1 {
+    position: relative;
+    width: 300px; /* Adjust size */
+    height: 200px; /* Adjust size */
+    border-radius: 50%; /* Creates an elliptical shape */
+    margin: 0 auto;
+    animation: rotateEllipse 10s infinite linear; /* Animation to rotate the ellipse */
+}
+
+/* Style for the images inside the ellipse */
+.image {
+    position: absolute;
+    width: 50px; /* Adjust image size */
+    height: 50px; /* Adjust image size */
+    top: 50%; /* Position the images vertically centered */
+    left: 50%; /* Position the images horizontally centered */
+    transform-origin: 50% 50%; /* Ensure rotation happens around the center */
+}
+
+/* Position the images around the ellipse */
+.image-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(120px);
+}
+.image-2 {
+    transform: translate(-50%, -50%) rotate(72deg) translateX(120px);
+}
+.image-3 {
+    transform: translate(-50%, -50%) rotate(144deg) translateX(120px);
+}
+.image-4 {
+    transform: translate(-50%, -50%) rotate(216deg) translateX(120px);
+}
+.image-5 {
+    transform: translate(-50%, -50%) rotate(288deg) translateX(120px);
+}
+
+/* Animation for rotating the images around the ellipse */
+@keyframes rotateEllipse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+   <div class="ellipse1">
+    <img src="2D/1.png" class="image image-1">
+    <img src="2D/2.png" class="image image-2">
+    <img src="2D/3.png" class="image image-3">
+    <img src="2D/4.png" class="image image-4">
+    <img src="2D/5.png" class="image image-5">
+</div>
+
+</body>
+</html>

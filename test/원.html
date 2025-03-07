@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 타원1 요소를 원 형태로 설정 */
+.타원1 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 100px auto;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+/* 이미지 스타일 */
+.image {
+    position: absolute;
+    width: 40px; /* 이미지 크기 */
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+}
+
+/* 각 이미지를 원형으로 배치 */
+.image-1 {
+    animation: rotate 10s linear infinite;
+    transform: rotate(0deg) translate(120px) rotate(0deg);
+}
+
+.image-2 {
+    animation: rotate 10s linear infinite;
+    transform: rotate(72deg) translate(120px) rotate(-72deg);
+}
+
+.image-3 {
+    animation: rotate 10s linear infinite;
+    transform: rotate(144deg) translate(120px) rotate(-144deg);
+}
+
+.image-4 {
+    animation: rotate 10s linear infinite;
+    transform: rotate(216deg) translate(120px) rotate(-216deg);
+}
+
+.image-5 {
+    animation: rotate 10s linear infinite;
+    transform: rotate(288deg) translate(120px) rotate(-288deg);
+}
+
+/* 애니메이션 설정 */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate(120px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(120px) rotate(0deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="타원1"> 
+        <img src="2D/1.png" class="image image-1"> 
+        <img src="2D/2.png" class="image image-2"> 
+        <img src="2D/3.png" class="image image-3"> 
+        <img src="2D/4.png" class="image image-4"> 
+        <img src="2D/5.png" class="image image-5"> 
+    </div>
+    
+</body>
+</html>

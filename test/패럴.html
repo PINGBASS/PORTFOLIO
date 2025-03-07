@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 효과</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .parallax {
+            height: 100vh;
+            background-image: url('겨자꽃/15.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            height: 200vh;
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 패럴랙스 효과를 위한 배경 -->
+    <div class="parallax"></div>
+
+    <!-- 콘텐츠 -->
+    <div class="content">
+        <h1>패럴랙스 효과가 적용된 섹션</h1>
+        <p>스크롤하면 배경이 다르게 움직이는 효과를 확인할 수 있습니다.</p>
+    </div>
+
+    <!-- 또 다른 패럴랙스 -->
+    <div class="parallax"></div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+	const choices = document.querySelectorAll(".choice");
+
+	choices.forEach((choice) => {
+		choice.addEventListener("click", function () {
+			// Clear the selected class from all buttons
+			choices.forEach((btn) => btn.classList.remove("selected"));
+
+			// Add the selected class to the clicked button
+			this.classList.add("selected");
+		});
+	});
+});
+    </script>
+    <style>
+    
+    /*배경색 이쁨 핑크 #d9afaf*/
+    
+        *{
+            margin:0;
+            padding:0;
+        }
+        a{
+            text-transform: none;
+        }
+        body {
+	margin: 0;
+	padding: 0;
+	background: #f0f0f0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* Container and header */
+.container {
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 2em;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+/* Choices grid layout */
+.choices {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+}
+
+/* Style for each color choice button */
+.choice {
+	position: relative;
+	background: #fff;
+	border:none;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	font-size: 1em;
+	color: #333;
+	cursor: pointer;
+	outline: none;
+	transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+	touch-action: manipulation;
+}
+
+/* Provide a subtle scale on touch for responsiveness */
+.choice:active {
+	transform: scale(0.95);
+}
+
+/* When a choice is selected, trigger a pop animation and update its style */
+.choice.selected {
+	animation: pop 0.5s ease-out;
+	border-color: transparent;
+	/* Hide the original text */
+	color: transparent;
+}
+
+/* Define background colors based on the data attribute */
+.choice[data-color="Red"].selected {
+	background-color: #e74c3c;
+}
+
+.choice[data-color="Blue"].selected {
+	background-color: #3498db;
+}
+
+.choice[data-color="Green"].selected {
+	background-color: #2ecc71;
+}
+
+.choice[data-color="Yellow"].selected {
+	background-color: #f1c40f;
+}
+
+.choice[data-color="Orange"].selected {
+	background-color: #e67e22;
+}
+
+/* Pseudo-element for animated text overlay */
+.choice.selected::after {
+	content: attr(data-color);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0.9);
+	font-size: 1em; /* Match original font size */
+	opacity: 0;
+	animation: fadeIn 0.5s forwards;
+}
+
+/* Ensure contrasting text color for the overlay */
+.choice[data-color="Red"].selected::after,
+.choice[data-color="Blue"].selected::after,
+.choice[data-color="Green"].selected::after,
+.choice[data-color="Orange"].selected::after {
+	color: #fff;
+}
+.choice[data-color="Yellow"].selected::after {
+	color: #fff;
+}
+
+/* Pop animation for a fun “bounce” effect */
+@keyframes pop {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.3);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* Fade-in and subtle scale animation for the text overlay */
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+/* Mobile responsiveness: adjust button and header sizes */
+@media (max-width: 600px) {
+	.choice {
+		width: 60px;
+		height: 60px;
+		font-size: 0.9em;
+	}
+	h1 {
+		font-size: 1.5em;
+	}
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose a Color</h1>
+        <div class="choices">
+            <button class="choice" data-color="Red"><a href="https://www.naver.com/">Red</a></button>
+            <button class="choice" data-color="Blue">Blue</button>
+            <button class="choice" data-color="Green">Green</button>
+            <button class="choice" data-color="Yellow">Yellow</button>
+            <button class="choice" data-color="Orange">Orange</button>
+        </div>
+        <!-- This merged circle will appear when two colors are selected -->
+        <div id="merged" class="merged" style="display: none;"></div>
+    </div>
+</body>
+</html>

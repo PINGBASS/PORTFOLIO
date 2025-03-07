@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scaling Effect</title>
+    <style>
+        .scaling-text {
+    display: inline-block;
+    font-size: 40px;
+    animation: scaleUpDown 3s infinite;
+}
+
+@keyframes scaleUpDown {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+    </style>>
+</head>
+<body>
+    <h1 class="scaling-text">이 텍스트는 확대/축소됩니다!</h1>
+</body>
+</html>

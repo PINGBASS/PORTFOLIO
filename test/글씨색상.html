@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change Effect</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .color-change {
+    font-size: 36px;
+    animation: colorChange 4s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: red;
+    }
+    50% {
+        color: blue;
+    }
+    100% {
+        color: green;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="color-change">글씨 색상이 변경됩니다!</h1>
+</body>
+</html>

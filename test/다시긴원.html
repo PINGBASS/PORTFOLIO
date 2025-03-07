@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .타원1 {
+    width: 960px;  /* 긴 원의 가로 길이 */
+    height: 560px; /* 긴 원의 세로 길이 */
+    position: relative;
+    border-radius: 50%; /* 타원형 만들기 */
+    margin: 0 auto;
+    animation: rotateEllipse 12s infinite linear; /* 회전 애니메이션 */
+}
+
+.image {
+    position: absolute;
+    width: 50px;  /* 이미지 크기 */
+    height: 50px; /* 이미지 크기 */
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+}
+
+.image-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(400px) translateY(0px); /* 타원 경로에 맞게 배치 */
+}
+.image-2 {
+    transform: translate(-50%, -50%) rotate(72deg) translateX(400px) translateY(0px); /* 타원 경로에 맞게 배치 */
+}
+.image-3 {
+    transform: translate(-50%, -50%) rotate(144deg) translateX(400px) translateY(0px); /* 타원 경로에 맞게 배치 */
+}
+.image-4 {
+    transform: translate(-50%, -50%) rotate(216deg) translateX(400px) translateY(0px); /* 타원 경로에 맞게 배치 */
+}
+.image-5 {
+    transform: translate(-50%, -50%) rotate(288deg) translateX(400px) translateY(0px); /* 타원 경로에 맞게 배치 */
+}
+
+@keyframes rotateEllipse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="타원1"> 
+        <img src="2D/1.png" class="image image-1"> 
+        <img src="2D/2.png" class="image image-2"> 
+        <img src="2D/3.png" class="image image-3"> 
+        <img src="2D/4.png" class="image image-4"> 
+        <img src="2D/5.png" class="image image-5"> 
+    </div>
+    
+    
+</body>
+</html>

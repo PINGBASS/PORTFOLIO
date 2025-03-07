@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ @import url("https://cdn.jsdelivr.net/npm/splitting@1.1.0/dist/splitting.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+:root {
+  --colors: #3399dd, #ff8888, #11bb99, #ff22cc, #ee7733, #ffcc99, #99dd33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  max-height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.headline {
+  align-items: center;
+  background-color: var(--color);
+  display: flex;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 6.0rem;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  scroll-snap-align: start;
+}
+
+.headline:nth-child(1) {
+  --color: #3399dd;
+}
+
+.headline:nth-child(2) {
+  --color: #ff8888;
+}
+
+.headline:nth-child(3) {
+  --color: #11bb99;
+}
+
+.headline:nth-child(4) {
+  --color: #ff22cc;
+}
+
+.headline:nth-child(5) {
+  --color: #ee7733;
+}
+
+.headline:nth-child(6) {
+  --color: #ffcc99;
+}
+
+.headline:nth-child(7) {
+  --color: #99dd33;
+}
+
+.word, .char {
+  animation-delay: var(--del);
+  animation-direction: var(--dir, normal);
+  animation-duration: var(--dur);
+  animation-iteration-count: var(--it, infinite);
+  animation-name: var(--name);
+  animation-timing-function: var(--tf);
+  animation-fill-mode: var(--fill, forwards);
+  display: inline-block;
+  position: relative;
+  transform-origin: 50% 100%;
+  z-index: 1;
+}
+
+#controls {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 1);
+}
+
+#fullscreenBtn {
+  font-size: 20px;
+}
+
+#upCaretBtn, #downCaretBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 40px;
+  background-color: #333333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+#upCaretBtn:hover, #downCaretBtn:hover {
+  background-color: #2877b0;
+  transform: scale(1.1);
+  font-size: 2.0rem;
+}
+
+#downCaretBtn {
+  bottom: 20px;
+}
+
+/* bounce */
+.textBounce .char {
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  --name: bounce;
+  --dur: 500ms;
+  --del: calc(var(--char-index) * -0.8s);
+  --tf: ease;
+}
+
+.textBounce .char:nth-child(2n) {
+  --name: bounce-next;
+}
+
+@keyframes bounce {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+  25% {
+    height: 30px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes bounce-next {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: rotateY(0.5turn) scaleX(2);
+  }
+  25% {
+    height: 30px;
+    border-radius: 50%;
+    transform: rotateY(0.25turn) scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+/* flip */
+.textFlip .char {
+  transform-origin: center;
+  --name: flip;
+  --dur: 4000ms;
+  --del: calc(var(--char-index) * 0.075s);
+  --tf: linear;
+}
+
+.textFlip .char:nth-child(2n) {
+  --name: flip-next;
+}
+
+@keyframes flip {
+  5% {
+    transform: rotateX(1turn);
+  }
+  10% {
+    transform: rotateX(2turn);
+  }
+  20% {
+    transform: rotateX(3turn);
+  }
+  40% {
+    transform: rotateX(4turn);
+  }
+  70%,
+  100% {
+    transform: rotateX(5turn);
+  }
+}
+
+@keyframes flip-next {
+  5% {
+    transform: scale(1.0) rotateY(1turn);
+  }
+  10% {
+    transform: scale(0.5) rotateY(2turn);
+  }
+  20% {
+    transform: scale(1.5) rotateY(3turn);
+  }
+  40% {
+    transform: scale(0.5) rotateY(4turn);
+  }
+  70%,
+  100% {
+    transform: scale(1.0) rotateY(5turn);
+  }
+}
+
+/* float */
+.textFloat .char {
+  --name: float;
+  --dur: 2200ms;
+  --del: calc(var(--char-index) * -0.5s);
+  --tf: ease-in-out;
+  --dir: alternate;
+}
+
+.textFloat .char:nth-child(2n) {
+  --name: float-next;
+}
+
+@keyframes float {
+  from {
+    transform: scale(1.1) translate(2%, -10%) rotate(-1deg);
+  }
+  to {
+    transform: scale(1.0) translate(-2%, 5%) rotate(5deg);
+  }
+}
+
+@keyframes float-next {
+  from {
+    transform: scale(1.0) translate(0%, -5%) rotate(-1deg);
+  }
+  to {
+    transform: scale(1.1) translate(2%, 10%) rotate(5deg);
+  }
+}
+
+/* jog */
+.textJog .char {
+  --name: jog;
+  --dur: 500ms;
+  --del: calc(var(--char-index) * -0.025s);
+  --tf: linear;
+}
+
+.textJog .char:nth-child(2n) {
+  --name: jog-next;
+}
+
+@keyframes jog {
+  0% {
+    transform: translate(0, 0) rotate(5deg);
+  }
+  25% {
+    transform: translate(5%, -5%) rotate(10deg);
+  }
+  50% {
+    transform: translate(5%, 0) rotate(15deg);
+  }
+  75% {
+    transform: translate(10%, -5%) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(5deg);
+  }
+}
+
+@keyframes jog-next {
+  0% {
+    transform: translate(0, 0) rotate(5deg);
+  }
+  25% {
+    transform: translate(-5%, 5%) rotate(10deg);
+  }
+  50% {
+    transform: translate(5%, 0) rotate(15deg);
+  }
+  75% {
+    transform: translate(-10%, 5%) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(5deg);
+  }
+}
+
+/* jump */
+.textJump .char {
+  --name: jump;
+  --dur: 800ms;
+  --del: calc(var(--char-index) * 0.075s);
+  --tf: cubic-bezier(0.165, 0.44, 0.64, 1);
+}
+
+.textJump .char:nth-child(2n) {
+  --name: jump-next;
+}
+
+@keyframes jump {
+  20% {
+    transform: translateY(2%) scaleY(0.9);
+  }
+  40% {
+    transform: translateY(-100%) scaleY(1.2);
+  }
+  50% {
+    transform: translateY(10%) scaleY(0.8);
+  }
+  70%,
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes jump-next {
+  20% {
+    transform: translateY(2%) rotateY(0.08turn) scaleY(0.9);
+  }
+  40% {
+    transform: translateY(-100%) rotateY(0.16turn) scaleY(1.2);
+  }
+  50% {
+    transform: translateY(10%) rotateY(0.40turn) scaleY(0.8);
+  }
+  70%,
+  100% {
+    transform: translateY}}
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h2 class="headline textJump" data-splitting="">jumping</h2>
+        <h2 class="headline textFlip" data-splitting="">flipping</h2>
+        <h2 class="headline textBounce" data-splitting="">bouncing</h2>
+        <h2 class="headline textFloat" data-splitting="">floating</h2>
+        <h2 class="headline textJog" data-splitting="">jogging</h2>
+        <h2 class="headline textTwirl" data-splitting="">twirling</h2>
+        <h2 class="headline textShake" data-splitting="">shaking</h2>
+      </main>
+      
+      <script src="https://cdn.jsdelivr.net/npm/splitting@1.1.0/dist/splitting.min.js"></script>
+      
+      <div id="controls">
+        <button id="fullscreenBtn" class="btn" title="Toggle Fullscreen">&#x2922;</button>
+        <button id="upCaretBtn" class="btn" title="Go to last headline">⬆</button>
+        <button id="downCaretBtn" class="btn" title="Go to next headline">⬇</button>
+      </div>
+      
+</body>
+<script>
+    Splitting();
+
+// Fullscreen toggle functionality
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+fullscreenBtn.addEventListener("click", toggleFullScreen);
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+// caret buttons
+  var idx = 0;
+  var sxn = document.querySelectorAll('h2');
+  for (let i = 0; i < sxn.length; i++) {
+    sxn[i].setAttribute('data-id', i);
+  }
+
+  document.addEventListener('click', move, false);
+
+  function move(e) {
+    if (e.target.id === 'upCaretBtn') {
+      idx--;
+      if (idx < 0) {
+        idx = sxn.length - 1; // Loop to the last section
+      }
+    } else if (e.target.id === 'downCaretBtn') {
+      idx++;
+      if (idx > sxn.length - 1) {
+        idx = 0; // Loop back to the first section
+      }
+    } else if (e.target.tagName === 'SECTION') {
+      idx = parseInt(e.target.getAttribute('data-id'), 10);
+    }
+    idxScroll(idx);
+  }
+
+  function idxScroll(idx) {
+    var act = document.querySelector('.active');
+    if (act) {
+      act.classList.remove('active'); // Remove active class
+    }
+    var x = sxn[idx];
+    x.classList.add('active'); // Add active class to the new section
+    x.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+</script>
+</html>
