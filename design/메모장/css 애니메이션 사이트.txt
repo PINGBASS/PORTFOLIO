@@ -163,3 +163,7 @@ if(window.scrollY > 1000){
 
 
 146 147 130
+
+
+
+https://rgy0409.tistory.com/5315 스마트폰
