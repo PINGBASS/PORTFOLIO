@@ -1,4 +1,3 @@
-@media screen and (min-width:1023px){
 *{  box-sizing: border-box; margin: 0 auto; }
 
 ul{ padding: 0; list-style: none; }
@@ -307,6 +306,28 @@ nav ul li a:hover::after {
   transform: translateX(40px);
 }
 
+/* 점핑 애니메이션 */
+@keyframes jump {
+  0% {
+      transform: translateY(0);
+  }
+  25% {
+      transform: translateY(-20px); /* 올라가면서 */
+  }
+  50% {
+      transform: translateY(10px);  /* 내려가면서 */
+  }
+  75% {
+      transform: translateY(-5px);  /* 다시 살짝 올라가면서 */
+  }
+  100% {
+      transform: translateY(0);     /* 원래 위치로 돌아오기 */
+  }
+}
+
+.box.jump {
+  animation: jump 0.8s ease-out;
+}
 
 /*휴대폰 start*/
 .list {
@@ -509,7 +530,7 @@ width: 100%;}
 
 .slider-buttons {
   position: absolute;
-  top: 2vw;
+  top: 68px;
   right: 85px;
   display: flex;
   flex-direction: row;
@@ -545,34 +566,24 @@ width: 100%;}
 }
 
 .right_img {
-  width: 56%;
-}
-.right_img1 {
-  width: 18%;
-}
-.right_img2 {
-  width: 56%;
-}
-
-
-.right_img img {
+  width: 44%;
   height: auto;
   object-fit: cover;
   margin-left: 12vw; 
 }
-.right_img1 img {
+.right_img1 {
+  width: 18%;
   height: auto;
   object-fit: cover;
-  width: 35vw;
-  
+  margin-left: 12vw; 
+}
+.right_img2 {
+  width: 56%;
+  height: auto;
+  object-fit: cover;
+  margin-left: 12vw; 
 }
 
-.right_img2 img {
-  height: auto;
-  object-fit: cover;
-  margin-left: 9vw; 
-  width: 67%;
-}
 
 
 
@@ -585,101 +596,89 @@ width: 100%;}
   margin-left: -8vw; 
 }
 
-.content h2,.content1 h2,.content_p_2 h2 {
+.content h2,.content1 h2 {
   font-size: 6rem;
-  margin-bottom: 3vw;
+  margin-bottom: 38px;
   line-height: 6vw;
   color: #fff;
 }
 
-/*=====================*/
-.skills {
-  display: flex;
-  justify-content: flex-start;
-}
-.detail_item h3 {
-  font-size: 0.9rem;
-  font-weight: 400;
-  margin-bottom: 0px;
-
-}
-.detail_item p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  font-weight: 200;
-
-}
-.detail_item{
-  margin-top:0.5vw;
-}
-.skills_images {
-  display: flex;
- 
-}
-.skill-item img {
-  width: 1.2vw;
-}
-.skills_images img {
-  width: 40px;
-  height: auto;
-}
-.project_details {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;  
-  gap: 6vw;
-}
-.skills_images {
-  display: flex;
-  gap: 0.5vw;
-  margin-top: 2.8vw;
-}
-.project_info {
-  display: flex;
-  flex-direction: column;
-  width: 15vw;
-}
-.skills_images img{
-  height: auto;
-  object-fit: cover;
-  
-
-}
-/*==============*/
-.content_p_1,.content_p_2 {
+.content p,.content1 p {
   font-size: clamp(0.8rem, 1.2rem, 1.5rem);
   margin-bottom: 20px;
   font-weight: 300;
-  line-height: 1.6vw;
+  line-height: 1.5vw;
   width: 36vw;
   color:#fff;
 }
 
 .section3_right {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-top: 6vw;
-  /* gap: 6vw; */
-  justify-content: flex-start;
-  flex-direction: row;
+  display: flex
+  ;
+      align-items: center;
+      width: 100%;
+      margin-top: 7.5vw;
+      /* gap: 6vw; */
+      justify-content: flex-start;
+      flex-direction: row;
 }
 .section3_right2 {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
-  flex-direction: row;
+  display: flex
+  ;
+      align-items: center;
+      width: 100%;
+      margin-top: 7.5vw;
+      gap: 6vw;
+      justify-content: space-between;
+      flex-direction: row;
 }
 .section3_right3 {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  justify-content: flex-start;
-  flex-direction: row;
+  display: flex
+  ;
+      align-items: center;
+      width: 100%;
+      margin-top: 7.5vw;
+      gap: 6vw;
+      justify-content: space-between;
+      justify-content: flex-start;
+      flex-direction: row;
 }
 
+.project_details {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  gap: 20px;
+}
+
+.project_info {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+}
+
+project_details 
+
+.detail_item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.detail_item p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.skills_images {
+  display: flex;
+ 
+}
+
+.skills_images img {
+  width: 40px;
+  height: auto;
+}
 
 
 
@@ -825,7 +824,7 @@ width: 100%;}
 .skill-description-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1vw;
+  gap: 2vw;
 }
 
 /* 각 스킬 그룹 */
@@ -856,9 +855,11 @@ width: 100%;}
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-bottom: 10px; 
+  margin-bottom: 5px; 
 }
-
+.skill-item img{
+  width:1.2vw;
+}
 /* 스킬*/
 .skill-name {
   font-size: 20px;
@@ -871,7 +872,6 @@ width: 100%;}
   font-size: 14px;
   color: #fafafa;
   line-height: 1.6; 
-  margin-left: 1vw;
  
 }
 
@@ -1158,7 +1158,7 @@ width: 100%;}
 }
 .moon::before{
   content: '';
-  background-color: #6e00fe;
+  background-color: #9900b8;
   position: absolute;
   display: block;
   height: 100%;
@@ -1174,7 +1174,7 @@ width: 100%;}
   }
   50%{
       transform:translate(0px,0px) scale(1.02);
-      box-shadow:0 0 10px #2600ff,0 0 80px 2px #0900ff;
+      box-shadow:0 0 10px #93879c,0 0 80px 2px #fff;
   }
   100%{
       transform:translateX(-40px) scale(0.9);
@@ -1247,9 +1247,4 @@ width: 100%;}
   font-weight: bold;
   color: #333;
   text-align: center;
-}
-
-#section11{
- display:none;  
-}
 }
