@@ -48,21 +48,21 @@ video{
 
 }
 .video-background{
-  width:48%;
+  width:100%;
 }
 #section1 {
   height: 600px;
   display: flex ;
-  justify-content: center;
   align-items: center;
   font-size: 24px;
-  margin-top: 50px;
-  justify-content: space-around;
+  margin-bottom: 4vw;
+  justify-content: center;
+  
   
 }
 
 #section2 {
-  height: 182vh;
+  height: 159vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,10 +79,11 @@ section{
   scroll-snap-align: center;
 }
 #section4 {
-  height: 125vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 26vw;
  
 }
 
@@ -109,19 +110,19 @@ nav
 #section1 { background-color: #161616; }
 #section2 { background-color: #161616; }
 
-#section4 { background-color: #161616;  }
+#section4 { background-color: #161616; margin-bottom: 16vw; }
 #section5 { background-color: #161616; }
 #section6 { background-color: #ffca00; }
 
 
 nav {
 position: absolute;
-top: calc(1080px * 4); 
+
 left:50%;
 transform: translate(-50%,-50%); 
 padding: 10px 0;
 height: 0vw;
-margin-top:13vw;
+
 }
 
 nav ul {
@@ -176,13 +177,13 @@ nav ul li a:hover::after {
 /*===========*/
 
 .text-container {
-  font-size: 30px;
+  font-size: 23px;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
   text-align: right;
   color: #d3d3d3;
-          margin-left: 28vw;
+  margin-left: 15vw;
 }
 
 .line {
@@ -228,6 +229,7 @@ nav ul li a:hover::after {
   color:#fff;
   font-size:9rem;
   font-weight: 600;
+  line-height: 11vw;
 }
 
 .section__type2{
@@ -238,7 +240,7 @@ nav ul li a:hover::after {
   transform: rotate(-13deg);
   text-align: right;
   position: absolute;
-  top: 19vw;
+  top:19vw;
   right: -8vw;
 
   
@@ -266,12 +268,12 @@ nav ul li a:hover::after {
     position: absolute;
     top:0;
     right:0;
-    margin-right: 4vw;
+    
    }
    .box-container__type1{
     color:#f8cad4;
-    font-size:5rem;
-    font-weight: 400;
+    font-size:4.7rem;
+    font-weight: 500;
     text-align: right;
     
    }
@@ -280,11 +282,11 @@ nav ul li a:hover::after {
     font-size:1rem;
     font-weight: 300;
     text-align: right;
-    margin-top:2vw;
+    margin-top:3vw;
    }
    .box-container__img{
     position: absolute;
-    top: 18.2vw;
+    top: 22.2vw;
     right: 32px;
     transition: 0.5sease-in-out;
     width:24%;
@@ -420,7 +422,7 @@ nav ul li a:hover::after {
   font-size:6rem;
   font-weight: 700;
   text-align: center;
-  margin-top:2vw;
+ 
   white-space: nowrap; /* 텍스트한줄*/
   width: 100%; 
     
@@ -430,7 +432,7 @@ color: #fff;
 font-size: 6rem;
 font-weight: 700;
 text-align: center;
-margin-top: 17vw;
+margin-top: 31vw;
 white-space: nowrap;
 width: 100%;}
 
@@ -511,7 +513,7 @@ width: 100%;}
 }
 
 .section3__type3 {  
-  background-color: #1c0116;
+  background-color: #990909;
 }
 
 
@@ -530,7 +532,7 @@ width: 100%;}
   background: none;
   padding: 10px;
   cursor: pointer;
-  font-size: clamp(1rem, 1.3rem, 2rem);
+  font-size: clamp(1rem, 1rem, 2rem);
   border-radius: 18px;
   transition: background-color 0.3s;
   width: 5vw;
@@ -545,7 +547,7 @@ width: 100%;}
   color:#ffc712;
 }
 .content3_1 {
-  font-size: 6rem;
+  font-size: 5rem;
   color: #ffc712;
 }
 .content{
@@ -559,7 +561,8 @@ width: 100%;}
   width: 18%;
 }
 .right_img2 {
-  width: 42%;
+  width: 35%;
+  margin-top:2vw;
 }
 
 
@@ -595,7 +598,7 @@ width: 100%;}
 }
 
 .content h2,.content1 h2,.content_p_2 h2 {
-  font-size: 6rem;
+  font-size: 5rem;
   margin-bottom: 3vw;
   line-height: 6vw;
   color: #fff;
@@ -625,8 +628,24 @@ width: 100%;}
   display: flex;
  
 }
-.skill-item img {
+.skill-group-title{
+  display:flex;
+  align-items: center;
+  gap:0.2vw;
+
+}
+.skill-group-title img {
   width: 1.2vw;
+  height: 1.2vw;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+.img_right{
+  margin-left:1vw;
+}
+img:hover {
+    filter: grayscale(0%);
+}
 }
 .skills_images img {
   width: 40px;
@@ -655,13 +674,21 @@ width: 100%;}
 
 }
 /*==============*/
-.content_p_1,.content_p_2 {
-  font-size: clamp(0.8rem, 1.2rem, 1.5rem);
+.content_p_2 {
+  font-size: clamp(0.8rem, 1rem, 1.5rem);
   margin-bottom: 20px;
   font-weight: 300;
   line-height: 1.6vw;
   width: 36vw;
-  color:#fff;
+  color:#d6d6d6;
+}
+.content_p_1 {
+  font-size: clamp(0.8rem, 1rem, 1.5rem);
+  margin-bottom: 20px;
+  font-weight: 400;
+  line-height: 1.75vw;
+  width: 36vw;
+  color:#d6d6d6;
 }
 
 .section3_right {
@@ -681,7 +708,9 @@ gap: 3vw;
   margin-top: 9vw;
   justify-content: center;
   gap:2vw;
-  
+  position: absolute;
+  top: 5vw;
+  left: 13vw;
 
 
 }
@@ -693,6 +722,7 @@ gap: 3vw;
   justify-content: flex-start;
   flex-direction: row;
   gap:13vw;
+  margin-top:2vw;
 }
 
 
@@ -871,19 +901,19 @@ gap: 3vw;
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-bottom: 10px; 
+  
 }
 
 /* 스킬*/
 .skill-name {
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
   color: #9d00ff;
 }
 
 /* 설명 */
 .description {
-  font-size: 14px;
+font-size: 0.8rem;
   color: #fafafa;
   line-height: 1.6; 
   margin-left: 1vw;
@@ -1221,13 +1251,13 @@ gap: 3vw;
 
 
 .box2 {
-
-  margin-top: 26vw;
+  margin-top: 31vw;
+ width: 24vw;;
 }
-
+.box2 img,.box3 img{width:100%;}
 .box3 {
- 
-  margin-top: 26vw;
+  
+  margin-top: 31vw;
 }
 
 /*마지막섹션*/
