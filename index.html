@@ -484,7 +484,38 @@
 
 
   <section id="section5">
-    <div class="section5__img">
+    <div>
+      <div class="section5__img section5__img_1">
+          <img src="img/LIIUST/22.png">
+          <img src="img/LIIUST/26.jpg">
+          <img src="img/LIIUST/23.png">
+          <img src="img/LIIUST/24.png">
+          <img src="img/LIIUST/25.png">
+          <img src="img/LIIUST/11.png">
+          <img src="img/LIIUST/16.png">
+          <img src="img/LIIUST/6.jpg">
+          <img src="img/LIIUST/9.jpg">
+          <img src="img/LIIUST/8.jpg">
+          <img src="img/LIIUST/4.jpg">
+          <img src="img/LIIUST/5.jpg">
+          <img src="img/LIIUST/7.jpg">
+          <img src="img/LIIUST/44.jpg">
+          <img src="img/LIIUST/55.png">
+          <img src="img/LIIUST/33.png">
+          <img src="img/LIIUST/66.png">
+          <img src="img/LIIUST/1.jpg">
+          <img src="img/LIIUST/2.jpg">
+          <img src="img/LIIUST/3.jpg">
+          <img src="img/LIIUST/10.jpg">
+          <img src="img/LIIUST/111.jpg">
+          <img src="img/LIIUST/13.jpg">
+          <img src="img/LIIUST/14.jpg">
+          <img src="img/LIIUST/15.jpg">
+          <img src="img/LIIUST/116.jpg">
+          <img src="img/LIIUST/66.png">
+      </div>
+
+      <div class="section5__img section5__img_2">
         <img src="img/LIIUST/22.png">
         <img src="img/LIIUST/26.jpg">
         <img src="img/LIIUST/23.png">
@@ -512,7 +543,8 @@
         <img src="img/LIIUST/15.jpg">
         <img src="img/LIIUST/116.jpg">
         <img src="img/LIIUST/66.png">
-    </div>
+      </div>
+  </div>
 </section>
 
   <div class="linetype moon">
@@ -665,21 +697,22 @@ startAutoSlide();
 //section5
 
 
-
-const images1 = document.querySelector('.section5__img');
-const imgCount = images.children.length;
+/*
+const imagesContainer1 = document.querySelector('.section5__img'); // 첫 번째 슬라이더
+const images1 = imagesContainer1.querySelectorAll('img');
+const imgCount1 = images1.length;
 let currentIndex1 = 0;
+let slideInterval1;
 
-function slideImages() {
-    currentIndex++;
-    if (currentIndex === imgCount) {
-        currentIndex = 0;
+function slideImages1() {
+    currentIndex1++;
+    if (currentIndex1 === imgCount1) {
+        currentIndex1 = 0;
     }
-    images.style.transform = `translateX(-${currentIndex1 * 100}%)`;
+    imagesContainer1.style.transform = `translateX(-${currentIndex1 * 100}%)`;
 }
 
-setInterval(slideImages, 3000); 
-
+slideInterval1 = setInterval(slideImages1, 3000);*/
 
 
 
