@@ -65,22 +65,25 @@
   }
   
   #section3 {
-   
+    height: 83vh;
     margin-top:14vw;
    
     
   }
   section{
     scroll-snap-align: center;
+    margin-top: 8vw;
   }
   #section4 {
-    height: 75vh;
-    display: flex;
+    height: 100vh;
+    display: flex
+;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:25vw;
+    gap: 39vw;
     margin-bottom: 4vw;
+    margin-top: 31vw;
    
   }
   
@@ -180,6 +183,7 @@
     display: inline-block;
     text-align: right;
     color: #d3d3d3;
+    margin-left: 28vw;
   }
   
   .line {
@@ -225,6 +229,7 @@
     color:#fff;
     font-size:clamp(30px ,3.2rem,6rem);
     font-weight: 600;
+    margin-left: 7vw;
   }
   
   .section__type2{
@@ -413,6 +418,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: -14vw;
+   
+
     
 }
   
@@ -432,7 +440,7 @@
   text-align: center;
   white-space: nowrap;
   width: 100%;
-  padding: 16vw;
+  padding: 26vw 0 5vw 0;
 }
   
   .line_type2{
@@ -513,30 +521,30 @@
   }
   
   
-  .slider-buttons {
+  .slider-buttons1 {
     position: absolute;
-    top: 7.8vw;
-    right: 28px;
+    top: 164.8vw;
+    
     display: flex;
     flex-direction: row;
     gap: 10px;
     z-index: 10;
   }
   
-  .slider-buttons .btn {
+  .slider-buttons1 > .btn {
     color: #ffc712;
     background: none;
     padding: 10px;
     cursor: pointer;
     font-size: clamp(0.7rem, 0.8rem, 2rem);
-    border-radius: 18px;
+    border-radius: 10px;
     transition: background-color 0.3s;
-    width: 6vw;
-    height: 6vw;
+    width: 16vw;
+    height: 16vw;
     border: 2px solid #ffc712;
   }
   
-  .slider-buttons .btn:hover {
+  .slider-buttons1 .btn:hover {
     border: 1px solid #93879c;
   }
   .btn a{
@@ -547,12 +555,11 @@
     color: #ffc712;
     line-height: 8vw;
   }
-  .content{
-    color:#fff;
-  }
+
+
   
   .right_img {
-    width: 56%;
+    width: 100%;
   }
   .right_img1 {
     width: 18%;
@@ -563,7 +570,10 @@
   
   
   .right_img img {
-    width: 100%;
+    width: 80%;
+    margin-left: 10vw;
+    margin-bottom: 9vw;
+    
   }
   .right_img1 img {
     height: auto;
@@ -583,11 +593,12 @@
   
   
   .content {
-   
-
+    
+    margin-top: 11vw;
+    margin: 0 auto;
     color: white;
     z-index: 5; 
-    margin-left: -13vw;
+    
   }
   
   .content h2,.content1 h2,.content_p_2 h2 {
@@ -771,48 +782,48 @@
   
   
   .ellipse1 .image-1 {
-    transform: translate(-253px, 58px)  rotate(0deg) translateX(500px);
+    transform: translate(-435px, 20px)  rotate(0deg) translateX(500px);
   }
   .ellipse1 .image-2 {
-    transform: translate(22px, -157px) rotate(72deg) translateX(250px);
+    transform: translate(-45px, -172px) rotate(72deg) translateX(250px);
   }
   .ellipse1 .image-3 {
-    transform: translate(186px, -152px) rotate(144deg) translateX(250px);
+    transform: translate(194px, -144px) rotate(144deg) translateX(250px);
   }
   .ellipse1 .image-4 {
-    transform: translate(311px, 34px) rotate(216deg) translateX(250px);
+    transform: translate(205px, 87px) rotate(216deg) translateX(250px);
   }
   .ellipse1 .image-5 {
-    transform: translate(213px, 167px)  rotate(288deg) translateX(250px);
+    transform: translate(-13px, 192px)   rotate(288deg) translateX(250px);
   }
   
   
   .ellipse2 .image-1 {
-    transform: translate(83px, 31px) rotate(0deg) translateX(210px);
+    transform: translate(-141px, 0px)  rotate(0deg) translateX(210px);
   }
   .ellipse2 .image-2 {
-    transform: translate(85PX, -118PX)  rotate(72deg) translateX(210px);
+    transform: translate(-23PX, -140PX)  rotate(72deg) translateX(210px);
   }
   .ellipse2 .image-3 {
     transform:translate(163PX,-104PX)  rotate(144deg) translateX(210px);
   }
   .ellipse2 .image-4 {
-    transform: translate(226PX, 24PX) rotate(216deg) translateX(210px);
+    transform: translate(172PX, 77PX) rotate(216deg) translateX(210px);
   }
   .ellipse2 .image-5 {
-    transform: translate(166PX, 103PX) rotate(288deg) translateX(210px);
+    transform: translate(-7PX, 144PX) rotate(288deg) translateX(210px);
   }
   
   
   .ellipse3 .image-1 {
-    transform: translate(143PX, -50%) rotate(0deg) translateX(160px);
+    transform: translate(-90PX, 0)  rotate(0deg) translateX(160px);
   }
   .ellipse3 .image-2 {
-    transform: translate(140PX, -50%) rotate(180deg) translateX(160px);
+    transform: translate(153PX, -50%) rotate(180deg) translateX(160px);
   }
   
   
- /*@keyframes rotateEllipse {
+ @keyframes rotateEllipse {
         0% {
             transform: rotate(0deg);
         }
@@ -828,7 +839,7 @@
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
-    margin-left: 15vw;
+    
   }
   
   /* 스킬과 설명글*/
@@ -854,10 +865,10 @@
   
   
   .skill-group-title {
-    font-size: clamp(0.6rem, 0.8rem, 2rem);
+    font-size: clamp(0.6rem, 1.5rem, 2rem);
     font-weight: bold;
     color: #949292;
-    margin-bottom: 15px; 
+    margin-top: 15px; 
     text-align: left;
     font-weight: 500;
   }
@@ -872,7 +883,7 @@
   
   /* 스킬*/
   .skill-name {
-    font-size: clamp(0.5rem, 0.8rem, 1.2rem);
+    font-size: clamp(0.5rem, 1rem, 1.2rem);
     font-weight: bold;
     color: #9d00ff;
   }
@@ -1005,7 +1016,7 @@
   
   /* Click */
   .section4__type a {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #ffffff;
     text-decoration: none;
@@ -1168,6 +1179,8 @@
     border-radius: 50%;
     position: relative;
     margin:0 auto;
+    margin-top: 19vw;
+    margin-bottom: 35vw;
     
   }
   .moon::before{
@@ -1266,7 +1279,7 @@
   }
   
   
-#section1,nav,.box-container__type2,.box2,.box3,.box-container__img,.box-container_type{
+#section1,nav,.slider-buttons,.box-container__type2,.box2,.box3,.box-container__img,.box-container_type{
   display:none;  
  }
   }

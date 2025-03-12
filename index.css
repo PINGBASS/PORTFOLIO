@@ -175,6 +175,7 @@ nav ul li a:hover::after {
   display: inline-block;
   text-align: right;
   color: #d3d3d3;
+          margin-left: 28vw;
 }
 
 .line {
@@ -1249,7 +1250,7 @@ width: 100%;}
   text-align: center;
 }
 
-#section11{
+#section11,.slider-buttons1{
  display:none;  
 }
 }
