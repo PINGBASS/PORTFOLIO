@@ -65,7 +65,7 @@
   }
   
   #section3 {
-    height:83vh;
+    height:103vh;
     margin-top:14vw;
    
     
@@ -92,9 +92,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 39vw;
-    margin-bottom: 4vw;
-    margin-top:45vw;
+    gap: 23vw;
+        margin-bottom: 4vw;
+        margin-top: 36vw;
    
   }
   
@@ -431,12 +431,16 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: -25vw;
- 
-
-   
-
-    
 }
+.linetype1{
+  padding: 14vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: -25vw;
+  margin-top:28vw;
+}
+
   
   .line_type{
     color:#fff;
@@ -706,10 +710,18 @@
     display: flex;
    
   }
+  .skills_images1 {
+    display: flex;
+   
+  }
   .skill-item img {
     width: 4.2vw;
   }
   .skills_images img {
+    width: 27px;
+    height: auto;
+  }
+  .skills_images1 img {
     width: 27px;
     height: auto;
   }
@@ -720,7 +732,19 @@
     gap: 4vw;
     flex-direction: column
   }
+  .project_details1 {
+    margin-top: 20px;
+    display: flex;
+    grid-template-columns: 1fr 1fr;  
+    gap: 4vw;
+    flex-direction: column
+  }
   .skills_images {
+    display: flex;
+    gap: 0.5vw;
+   
+  }
+  .skills_images1 {
     display: flex;
     gap: 0.5vw;
    
@@ -733,6 +757,12 @@
     flex-direction: row;
   }
   .skills_images img{
+    height: auto;
+    object-fit: cover;
+    
+  
+  }
+  .skills_images1 img{
     height: auto;
     object-fit: cover;
     
@@ -767,6 +797,10 @@
     margin-top:8vw;
     
   }
+  .content_p_4{
+    display:none;
+  }
+ 
   
   .section3_right {
     display: flex;
@@ -828,7 +862,7 @@
     justify-content: center; 
     align-items: center;
     position: relative;
-    
+    margin-top: 37vw;
     
   }
   
