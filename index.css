@@ -84,7 +84,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 26vw;
+  margin-top: 18vw;
  
 }
 
@@ -118,7 +118,7 @@ nav
 
 nav {
 position: absolute;
-
+margin-top: 2vw;
 left:50%;
 transform: translate(-50%,-50%); 
 padding: 10px 0;
@@ -273,7 +273,7 @@ nav ul li a:hover::after {
    }
    .box-container__type1{
     color:#f8cad4;
-    font-size:4.7rem;
+    font-size:5.7rem;
     font-weight: 500;
     text-align: right;
     
@@ -417,6 +417,15 @@ nav ul li a:hover::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
+}
+.linetype1{
+  height: 19vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top:9vw;
+  
 }
 .line_type{
   color:#fff;
@@ -436,7 +445,14 @@ text-align: center;
 margin-top: 31vw;
 white-space: nowrap;
 width: 100%;}
-
+.line_type4{
+  color: #fff;
+  font-size: 6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 31vw;
+  white-space: nowrap;
+  width: 100%;}
 .line_type2{
   color:#ffca00;
   font-size:3.7rem;
@@ -514,7 +530,7 @@ width: 100%;}
 }
 
 .section3__type3 {  
-  background-color: #990909;
+  background-color: #9e6aa5;
 }
 
 
@@ -983,9 +999,9 @@ gap: 3vw;
 
 
 .skill-group-title {
-  font-size: clamp(0.8rem, 1rem, 2rem);
+  font-size: clamp(0.8rem, 1.5rem, 2rem);
   font-weight: bold;
-  color: #949292;
+  color: #bfbfbf;
   margin-bottom: 15px; 
   text-align: left;
   font-weight: 500;
@@ -1001,14 +1017,14 @@ gap: 3vw;
 
 /* 스킬*/
 .skill-name {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #9d00ff;
 }
 
 /* 설명 */
 .description {
-font-size: 0.8rem;
+font-size: 0.95rem;
   color: #fafafa;
   line-height: 1.6; 
   margin-left: 1vw;

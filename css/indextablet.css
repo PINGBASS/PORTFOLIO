@@ -283,14 +283,15 @@
      }
      .box-container__type2{
       color:#fff;
-      font-size:0.9rem;
+      font-size:1rem;
       font-weight: 300;
-      margin-top:2vw;
+      margin-top: 4vw;
+      text-align: end;
      }
      .box-container__img{
       position: absolute;
-      top: 32.2vw;
-      right: 49vw;
+      top: 34vw;
+      right: 0;
       transition: 0.5sease-in-out;
       width:24%;
   }
@@ -427,6 +428,15 @@
   justify-content: center;
   margin-bottom: 20vw;
 }
+.line_type4{
+  height: 14vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20vw;
+  margin-top:11vw;
+}
+
 
   
   .line_type{
@@ -523,7 +533,7 @@
   }
   
   .section3__type3 {
-    background-color: rgb(153, 9, 9);
+    background-color: #9e6aa5;
   }
   
   
@@ -750,6 +760,14 @@
     flex-direction: row;
     width: 100%;
         gap: 2vw;
+  }
+  .project_info2 {
+    display: flex;
+        width: 55vw;
+        flex-direction: column;
+        /* gap: 5vw; */
+       
+    
   }
   
   .skills_images img{

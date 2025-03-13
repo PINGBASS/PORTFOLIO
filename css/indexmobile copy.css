@@ -65,7 +65,7 @@
   }
   
   #section3 {
-    height:103vh;
+    height:108vh;
     margin-top:14vw;
    
     
@@ -444,7 +444,7 @@
   
   .line_type{
     color:#fff;
-    font-size:clamp(21px , 2.2rem , 6.5rem);
+    font-size:clamp(21px , 1.8rem , 6.5rem);
     font-weight: 700;
     text-align: center;
     white-space: nowrap; /* 텍스트한줄*/
@@ -452,6 +452,14 @@
       
   }
   .line_type1{
+  color: #fff;
+  font-size: 6rem;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+  padding: 26vw 0 5vw 0;
+} .line_type4{
   color: #fff;
   font-size: 6rem;
   font-weight: 700;
@@ -534,7 +542,7 @@
   
   .slider-buttons1 {
     position: absolute;
-    top: 168.8vw;
+    top: 177.8vw;
     
     display: flex;
     flex-direction: row;
@@ -565,7 +573,7 @@
   .content3_1 {
     font-size: clamp(25px, 2.5rem,6rem) ;
     color: #ffc712;
-    line-height: 11vw;
+    line-height: 20vw;
   }
 
   .section3_right1 > .content3_1 {
@@ -611,7 +619,7 @@
 
   .slider-buttons3 {
     position: absolute;
-    top: 157.8vw;
+    top: 162.8vw;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -682,7 +690,7 @@
   .content h2,.content1 h2,.content_p_2 h2 {
     font-size:clamp(25px, 3rem,6rem) ;
   
-    line-height: 6vw;
+    line-height: 12vw;
     color: #fff;
   }
   
@@ -726,7 +734,6 @@
     height: auto;
   }
   .project_details {
-    margin-top: 20px;
     display: flex;
     grid-template-columns: 1fr 1fr;  
     gap: 4vw;
@@ -862,7 +869,7 @@
     justify-content: center; 
     align-items: center;
     position: relative;
-    margin-top: 37vw;
+    margin-top: 52vw;
     
   }
   
@@ -876,8 +883,8 @@
   
   
   .ellipse1 {
-    width: 21vw;
-    height: 17vh;
+    width: 32vw;
+    height: 31vh;
     animation-duration: 14s; 
     animation-direction: normal; 
     border: 1px solid rgba(68, 0, 255, 0.4);
@@ -890,8 +897,8 @@
   
   
   .ellipse2 {
-    width: 21vw;
-    height: 17vh;
+    width: 32vw;
+    height: 31vh;
     animation-duration: 22s; 
     animation-direction: reverse;
     border: 1px solid rgb(251, 0, 222);
@@ -900,8 +907,8 @@
   }
   
   .ellipse3 {
-    width: 21vw;
-    height: 17vh;
+    width: 32vw;
+    height: 31vh;
     animation-duration: 6s; 
     animation-direction: normal; 
     border: 1px solid rgb(140, 0, 255);
@@ -923,19 +930,19 @@
   
   
   .ellipse1 .image-1 {
-    transform: translate(-435px, 20px)  rotate(0deg) translateX(500px);
+    transform: translate(-391px, 15px)   rotate(0deg) translateX(500px);
   }
   .ellipse1 .image-2 {
-    transform: translate(-45px, -172px) rotate(72deg) translateX(250px);
+    transform: translate(-22px, -143px) rotate(72deg) translateX(250px);
   }
   .ellipse1 .image-3 {
-    transform: translate(194px, -144px) rotate(144deg) translateX(250px);
+    transform: translate(199px, -116px)  rotate(144deg) translateX(250px);
   }
   .ellipse1 .image-4 {
     transform: translate(205px, 87px) rotate(216deg) translateX(250px);
   }
   .ellipse1 .image-5 {
-    transform: translate(-13px, 192px)   rotate(288deg) translateX(250px);
+    transform: translate(23px, 168px)  rotate(288deg) translateX(250px);
   }
   
   
@@ -957,7 +964,7 @@
   
   
   .ellipse3 .image-1 {
-    transform: translate(-90PX, 0)  rotate(0deg) translateX(160px);
+    transform: translate(-49PX, 0)  rotate(0deg) translateX(160px);
   }
   .ellipse3 .image-2 {
     transform: translate(153PX, -50%) rotate(180deg) translateX(160px);
@@ -980,7 +987,7 @@
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
-    
+    margin-top: 8vw;
   }
   
   /* 스킬과 설명글*/
@@ -1006,7 +1013,7 @@
   
   
   .skill-group-title {
-    font-size: clamp(0.6rem, 1.5rem, 2rem);
+    font-size: clamp(0.6rem, 1.2rem, 2rem);
     font-weight: bold;
     color: #949292;
     margin-top: 15px; 
@@ -1240,7 +1247,7 @@
       font-weight: 600;
         text-align: center;
         color:#2e2e2e;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         
     }
     .section4_type2{
@@ -1259,7 +1266,7 @@
         font-size: clamp(1rem,2.8rem,4.5rem);
        
         font-weight: 700;
-        line-height: 7vw;
+        line-height:12vw;
     
     }
     .section4_type4{
