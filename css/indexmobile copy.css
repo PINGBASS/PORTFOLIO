@@ -65,14 +65,25 @@
   }
   
   #section3 {
-    height: 83vh;
+    height:83vh;
     margin-top:14vw;
    
     
   }
+  video{
+    width: 100%;
+    
+  
+  }
+  .video-background{
+    width:100%;
+    margin-top: 20vw;
+    
+  }
+ 
   section{
     scroll-snap-align: center;
-    margin-top: 8vw;
+    margin-top: 14vw;
   }
   #section4 {
     height: 100vh;
@@ -83,7 +94,7 @@
     flex-direction: column;
     gap: 39vw;
     margin-bottom: 4vw;
-    margin-top: 31vw;
+    margin-top:45vw;
    
   }
   
@@ -92,6 +103,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 17vh;
     
   }
   
@@ -325,7 +337,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 61vh;
+    height: 70vh;
 
   
         
@@ -418,7 +430,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: -14vw;
+    margin-bottom: -25vw;
+ 
+
    
 
     
@@ -426,7 +440,7 @@
   
   .line_type{
     color:#fff;
-    font-size:clamp(21px , 1.5rem , 6.5rem);
+    font-size:clamp(21px , 2.2rem , 6.5rem);
     font-weight: 700;
     text-align: center;
     white-space: nowrap; /* 텍스트한줄*/
@@ -470,12 +484,12 @@
     height: 45vh;
   }
   .section3__type2{
-    background-color: #7e7e7e;
+    
     width:100%;
     height: 100vh;
   }
   .section3__type3{
-    background-color: #d1d1d1;
+ 
     width:100%;
     height: 100vh;
   }
@@ -512,18 +526,11 @@
   
   
  
-  .section3__type2 {
-    background-color: #0d021a; 
-  }
-  
-  .section3__type3 {
-    background-color: #090d32;
-  }
-  
+ 
   
   .slider-buttons1 {
     position: absolute;
-    top: 164.8vw;
+    top: 168.8vw;
     
     display: flex;
     flex-direction: row;
@@ -531,16 +538,17 @@
     z-index: 10;
   }
   
+  
   .slider-buttons1 > .btn {
     color: #ffc712;
     background: none;
     padding: 10px;
     cursor: pointer;
-    font-size: clamp(0.7rem, 0.8rem, 2rem);
+    font-size: clamp(0.6rem, 0.7rem, 2rem);
     border-radius: 10px;
     transition: background-color 0.3s;
-    width: 16vw;
-    height: 16vw;
+    width: 14vw;
+    height: 14vw;
     border: 2px solid #ffc712;
   }
   
@@ -551,12 +559,78 @@
     color:#ffc712;
   }
   .content3_1 {
-    font-size: clamp(25px, 2rem,6rem) ;
+    font-size: clamp(25px, 2.5rem,6rem) ;
     color: #ffc712;
-    line-height: 8vw;
+    line-height: 11vw;
+  }
+
+  .section3_right1 > .content3_1 {
+    font-size: clamp(25px, 2.5rem,6rem) ;
+    color: #ffc712;
+    line-height: 6vw;
   }
 
 
+
+
+  .slider-buttons2 {
+    position: absolute;
+    top: 145.8vw;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  
+  .slider-buttons2 > .btn {
+    color: #ffc712;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: clamp(0.6rem, 0.7rem, 2rem);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    width: 14vw;
+    height: 14vw;
+    border: 2px solid #ffc712;
+  }
+  
+  .slider-buttons2 .btn:hover {
+    border: 1px solid #93879c;
+  }
+  
+
+
+
+
+  .slider-buttons3 {
+    position: absolute;
+    top: 157.8vw;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  
+  .slider-buttons3 > .btn {
+    color: #ffc712;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: clamp(0.6rem, 0.7rem, 2rem);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    width: 14vw;
+    height: 14vw;
+    border: 2px solid #ffc712;
+  }
+  
+  .slider-buttons3 .btn:hover {
+    border: 1px solid #93879c;
+  }
   
   .right_img {
     width: 100%;
@@ -565,7 +639,7 @@
     width: 18%;
   }
   .right_img2 {
-    width: 50%;
+    width: 100%;
   }
   
   
@@ -586,7 +660,7 @@
     height: auto;
     object-fit: cover;
     margin-left: 9vw; 
-    width: 67%;
+    width: 82%;
   }
   
   
@@ -602,8 +676,8 @@
   }
   
   .content h2,.content1 h2,.content_p_2 h2 {
-    font-size:clamp(25px, 2rem,6rem) ;
-    margin-bottom: 3vw;
+    font-size:clamp(25px, 3rem,6rem) ;
+  
     line-height: 6vw;
     color: #fff;
   }
@@ -653,8 +727,10 @@
   }
   .project_info {
     display: flex;
-    flex-direction: column;
-    width: 40vw;
+    gap: 11.5vw;
+    
+    width: 100%;
+    flex-direction: row;
   }
   .skills_images img{
     height: auto;
@@ -663,7 +739,7 @@
   
   }
   /*==============*/
-  .content_p_1,.content_p_2 {
+  .content_p_1{
     font-size: clamp(0.8rem, 0.9rem, 1.5rem);
     margin-bottom: 20px;
     font-weight: 400;
@@ -671,6 +747,25 @@
     width:45vw;
     color:#fff;
     display:none;
+  }
+  .content_p_2 {
+    font-size: clamp(0.8rem, 0.9rem, 1.5rem);
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 2.6vw;
+    width:45vw;
+    color:#fff;
+    
+  }
+  .content_p_3 {
+    font-size: clamp(0.8rem, 2.5rem, 1.5rem);
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 2.6vw;
+    width:79vw;
+    color:#fff;
+    margin-top:8vw;
+    
   }
   
   .section3_right {
@@ -682,6 +777,17 @@
     justify-content: flex-start;
    
     flex-direction: column;
+  }
+  .section3_right1 {
+    display: flex
+    ;
+            /* align-items: center; */
+            width: 100%;
+            margin-top: 11vw;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin-left: 11vw;
+        
   }
   .section3_right2 {
     display: flex;
@@ -698,7 +804,8 @@
     width: 100%;
     justify-content: flex-start;
     flex-direction: row;
-    margin-top:13vw;
+    margin-top:9vw;
+    flex-direction: column
   }
   
   
@@ -854,7 +961,7 @@
     display: flex;
     flex-direction: column;
   }
-  
+  .skills-wrapper img{display:none;}
   /* 개별스킬*/
   .skill-group {
     display: flex;
@@ -958,12 +1065,12 @@
   
   .section5__img {
       display: flex;
-      animation: slide 20s infinite linear;
+      animation: slide 50s infinite linear;
   }
   
   .section5__img img {
-    width: 34%;
-    height: 15vh;
+    
+    height: 17vh;
 
   
   }
@@ -991,13 +1098,12 @@
   #section6{
     display:flex;
     justify-content: flex-start;
-    height: 100vh;
     flex-direction: column;
   }
   
   #section6 img{
-    width:100%;
-    height: 57vh;
+    width:73%;
+   
   }
   
   
@@ -1179,7 +1285,7 @@
     border-radius: 50%;
     position: relative;
     margin:0 auto;
-    margin-top: 19vw;
+    margin-top: 36vw;
     margin-bottom: 35vw;
     
   }

@@ -645,7 +645,7 @@ width: 100%;}
 }
 img:hover {
     filter: grayscale(0%);
-}
+
 }
 .skills_images img {
   width: 40px;
@@ -985,20 +985,21 @@ font-size: 0.8rem;
 
 
 .section5__img img {
-  width: 200px
+  height: 21vw;
+
 }
 #section5 > div{
   display: flex;
   gap: 20px;
 }
 .section5__img_1{
-  animation: slide 5s linear infinite;
+  animation: slide 45s linear infinite;
   white-space: nowrap;
-  gap: 20px;
+  gap: 50px;
   transform: translateX(0%);
 }
 .section5__img_2{
-  animation: slide 5s linear infinite;
+  animation: slide 45s linear infinite;
   white-space: nowrap;
   transform: translateX(0%);
   gap: 20px;
