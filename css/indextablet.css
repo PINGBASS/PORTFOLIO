@@ -492,7 +492,9 @@
     width:100%;
     height: 100vh;
   }
-  
+  .section4__type4 {
+    background-color:  #8890c7;
+  }
   
   
   
@@ -512,7 +514,7 @@
   .slider {
     display: flex;
     transition: transform 1s ease-in-out;
-    width: 300%; 
+    width: 400%; 
   }
   
   /* 각 슬라이드 */
@@ -676,8 +678,15 @@
     z-index: 5; 
     margin-left: -8vw; 
   }
-  
-  .content h2,.content1 h2,.content_p_2 h2 {
+  .content4 {
+    max-width: 45%; 
+    padding: 20px;
+    color: white;
+    z-index: 5; 
+    margin-left: -8vw; 
+    margin-bottom: 20vw;
+  }
+  .content h2,.content1 h2,.content_p_2 h2,.content4 h2 {
     font-size:clamp(25px, 3rem,6rem) ;
     margin-bottom: 0.8vw;
     line-height: 6vw;
@@ -728,6 +737,11 @@
     display: flex;
    
   }
+  .skills_images2 {
+    display: flex;
+    gap: 0.5vw;
+    margin-top: 5.8vw;
+  }
   .detail_item{
     margin-top:0.5vw;
     display: flex;
@@ -770,17 +784,15 @@
     
   }
   
-  .skills_images img{
+  .skills_images img,.skills_images2 img{
     height: auto;
     object-fit: cover;
     width:40px;
-  
   }
   .skills_images1 img{
     height: auto;
     object-fit: cover;
     width:40px;
-  
   }
   /*==============*/
   .content_p_1{
@@ -837,7 +849,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin-top: 11vw;
+    margin-top: 8vw;
     /* gap: 6vw; */
     justify-content: flex-start;
     flex-direction: row;
@@ -881,7 +893,7 @@
     justify-content: center; 
     align-items: center;
     position: relative;
-    
+    margin-top: 26vw;
     
   }
   

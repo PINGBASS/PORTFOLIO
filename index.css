@@ -45,11 +45,11 @@ html, body {
 video{
   width: 100%;
   
-
 }
 .video-background{
   width:100%;
 }
+
 #section1 {
   height: 600px;
   display: flex ;
@@ -509,7 +509,7 @@ width: 100%;}
 .slider {
   display: flex;
   transition: transform 1s ease-in-out;
-  width: 300%; 
+  width: 400%; 
 }
 
 /* 각 슬라이드 */
@@ -532,7 +532,9 @@ width: 100%;}
 .section3__type3 {  
   background-color: #9e6aa5;
 }
-
+.section4__type4 {
+  background-color: #8890c7;/*#676c91;*/
+}
 
 .slider-buttons {
   position: absolute;
@@ -643,7 +645,7 @@ width: 100%;}
   height: auto;
   object-fit: cover;
   margin-left: 7vw; 
-  width:37.5vw;
+  width:40.5vw;
 }
 .right_img1 img {
   height: auto;
@@ -669,8 +671,15 @@ width: 100%;}
   z-index: 5; 
   margin-left: -8vw; 
 }
-
-.content h2,.content1 h2,.content_p_2 h2,.content_p_3 h2 {
+.content4 {
+  max-width: 45%; 
+  padding: 20px;
+  color: white;
+  z-index: 5; 
+  margin-left: -8vw; 
+  margin-bottom: 14vw;
+}
+.content h2,.content1 h2,.content_p_2 h2,.content_p_3 h2 ,.content4 h2 {
   font-size: 5rem;
   margin-bottom: 3vw;
   line-height: 6vw;
@@ -697,7 +706,7 @@ width: 100%;}
 .detail_item{
   margin-top:0.5vw;
 }
-.skills_images {
+.skills_images,.skills_images2 {
   display: flex;
  
 }
@@ -724,7 +733,7 @@ img:hover {
     filter: grayscale(0%);
 
 }
-.skills_images img {
+.skills_images img,.skills_images2 img {
   width: 40px;
   height: auto;
 }
@@ -738,7 +747,7 @@ img:hover {
   grid-template-columns: 1fr 1fr;  
   gap: 6vw;
 }
-.skills_images {
+.skills_images,.skills_images2 {
   display: flex;
   gap: 0.5vw;
   margin-top: 2.8vw;
@@ -781,7 +790,7 @@ img:hover {
   font-weight: 400;
   line-height: 1.75vw;
   width: 36vw;
-  color:#d6d6d6;
+  color:#ffffff;
 }
 .content_p_3 {
   font-size: clamp(0.8rem, 1.3rem, 1.5rem);
@@ -1429,4 +1438,9 @@ font-size: 0.95rem;
 #section11,.slider-buttons1{
  display:none;  
 }
+
+
+
+
+
 }
