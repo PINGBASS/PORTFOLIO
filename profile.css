@@ -125,7 +125,7 @@ margin-bottom: 15px;
     animation: slideInLeft 1s ease-out;
 }
 
-.profile-info p {
+.profile_info_tablet p {
     font-size: clamp(16px ,1.1rem,1.6rem);
     line-height: 1.3vw;
     color: #555;
@@ -135,6 +135,8 @@ margin-bottom: 15px;
       animation: fadeIn 1s 0.5s forwards;
       line-height: 1.3vw;
 }
+
+
 
 .career-section {
     margin-top: 30px;
@@ -291,5 +293,8 @@ nav ul li a:hover::after {
 }
 .profile-photo img.active {
     opacity: 1;
+}
+.profile_info_mobile{
+    display:none;
 }
 }
