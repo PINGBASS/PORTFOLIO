@@ -541,13 +541,21 @@
   
   .slider-buttons1 {
     position: absolute;
-    top:179.8vw;
+    top:185.8vw;
     display: flex;
     flex-direction: row;
     gap: 10px;
     z-index: 10;
   }
-  
+  .slider-buttons4 {
+    position: absolute;
+    top:160.8vw;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 10;
+    left:10vw;
+  }
   
   .slider-buttons1 > .btn {
     color: #ffc712;
@@ -563,6 +571,22 @@
   }
   
   .slider-buttons1 .btn:hover {
+    border: 1px solid #93879c;
+  }
+  .slider-buttons4 > .btn {
+    color: #ffc712;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: clamp(0.6rem, 0.7rem, 2rem);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    width: 14vw;
+    height: 14vw;
+    border: 2px solid #ffc712;
+  }
+  
+  .slider-buttons4 .btn:hover {
     border: 1px solid #93879c;
   }
   .btn a{
@@ -692,7 +716,7 @@
   .detail_item{
     margin-top:0.5vw;
   }
-  .skills_images,.skills_images2 {
+  .skills_images,.skills_images2,.skills_image {
     display: flex;
    
   }
@@ -703,7 +727,7 @@
   .skill-item img {
     width: 4.2vw;
   }
-  .skills_images img,.skills_images2 img {
+  .skills_images img,.skills_images2 img,.skills_image  img {
     width: 27px;
     height: auto;
   }
@@ -724,7 +748,7 @@
     gap: 4vw;
     flex-direction: column
   }
-  .skills_images,.skills_images2 {
+  .skills_images,.skills_images2 ,.skills_image {
     display: flex;
     gap: 0.5vw;
    
@@ -741,7 +765,7 @@
     width: 100%;
     flex-direction: row;
   }
-  .skills_images img, .skills_images2 img{
+  .skills_images img, .skills_images2 img ,.skills_image  img{
     height: auto;
     object-fit: cover;
     
