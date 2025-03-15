@@ -784,7 +784,7 @@
     
   }
   
-  .skills_images img,.skills_images2 img{
+  .skills_images img,.skills_images2 img,.skills_imges img{
     height: auto;
     object-fit: cover;
     width:40px;
