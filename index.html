@@ -221,7 +221,7 @@
         </div>    
       </div>
     
-      <div class="section3__type3 slide" >
+      <div class="section3__type3 slide"  >
         <div class="slider-buttons">
           <button class="btn"><a href="">WIRE<br>PROTO</a></button>
           <button class="btn"><a href="">PLAN</a></button>
@@ -631,6 +631,48 @@
   </div>
 </section>
 
+
+<section id="section5-mobile">
+  <div class="auto-slider-mobile">
+    <div class="auto-slider-mobile__track">
+      <div class="auto-slider-mobile__img">
+        <img src="img/LIIUST/22.png">
+        <img src="img/LIIUST/26.jpg">
+        <img src="img/LIIUST/23.png">
+        <img src="img/LIIUST/24.png">
+        <img src="img/LIIUST/25.png">
+        <img src="img/LIIUST/11.png">
+        <img src="img/LIIUST/16.png">
+        <img src="img/LIIUST/6.jpg">
+        <img src="img/LIIUST/9.jpg">
+        <img src="img/LIIUST/8.jpg">
+        <img src="img/LIIUST/4.jpg">
+        <img src="img/LIIUST/5.jpg">
+        <img src="img/LIIUST/7.jpg">
+        <img src="img/LIIUST/44.jpg">
+        <img src="img/LIIUST/55.png">
+        <img src="img/LIIUST/33.png">
+        <img src="img/LIIUST/66.png">
+        <img src="img/LIIUST/1.jpg">
+        <img src="img/LIIUST/2.jpg">
+        <img src="img/LIIUST/3.jpg">
+        <img src="img/LIIUST/10.jpg">
+        <img src="img/LIIUST/11.jpg">
+        <img src="img/LIIUST/111.jpg">
+        <img src="img/LIIUST/13.jpg">
+        <img src="img/LIIUST/14.jpg">
+        <img src="img/LIIUST/15.jpg">
+        <img src="img/LIIUST/116.jpg">
+        <img src="img/LIIUST/66.png">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
   <div class="linetype moon">
     <div class="line_type">Thank You</div>
     <div class="line_type2"></div>
@@ -741,6 +783,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // 자동 슬라이드 관련 변수
+/*
 const sliders = document.querySelectorAll('.slider'); // 모든 슬라이더 선택
 const allSlides = document.querySelectorAll('.slide');
 let slideIntervals = {}; // 슬라이드별 인터벌 저장 객체
@@ -771,7 +814,7 @@ function startAutoSlide(slider) {
 function stopAutoSlide(slider) {
   let sliderId = slider.getAttribute('id');
   clearInterval(slideIntervals[sliderId]);
-  delete slideIntervals[sliderId]; // 인터벌 제거
+  delete slideIntervals[sliderId]; 
 }
 
 // 버튼 이벤트 추가
@@ -779,14 +822,14 @@ const buttonGroups = document.querySelectorAll('.slider-buttons, .slider-buttons
 
 buttonGroups.forEach(group => {
   const buttons = group.querySelectorAll('.btn');
-  const slider = group.closest('.slider-container').querySelector('.slider'); // 해당 그룹과 연결된 슬라이더 찾기
+  const slider = group.closest('.slider-container').querySelector('.slider'); 
 
   buttons.forEach((button, index) => {
-    button.addEventListener('mouseenter', () => stopAutoSlide(slider)); // 슬라이드 멈춤
-    button.addEventListener('mouseleave', () => startAutoSlide(slider)); // 다시 시작
+    button.addEventListener('mouseenter', () => stopAutoSlide(slider)); 
+    button.addEventListener('mouseleave', () => startAutoSlide(slider)); 
 
     button.addEventListener('click', () => {
-      moveToSlide(slider, index); // 해당 버튼에 맞는 슬라이드로 이동
+      moveToSlide(slider, index); 
     });
   });
 
@@ -794,14 +837,14 @@ buttonGroups.forEach(group => {
   startAutoSlide(slider);
 });
 
-// 특정 슬라이드로 이동하는 함수
+// 특정 슬라이드로 이동하는  
 function moveToSlide(slider, slideIndex) {
   const slides = slider.querySelectorAll('.slide');
   const slideWidth = slides[0].clientWidth;
 
   slider.style.transform = `translateX(-${slideIndex * 100}vw)`;
   slider.setAttribute('data-index', slideIndex);
-}
+}*/
 
 
 

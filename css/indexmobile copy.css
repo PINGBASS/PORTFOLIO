@@ -541,12 +541,14 @@
   
   .slider-buttons1 {
     position: absolute;
-    top:185.8vw;
+  top: 95vh;
     display: flex;
     flex-direction: row;
     gap: 10px;
     z-index: 10;
   }
+
+  
   .slider-buttons4 {
     position: absolute;
     top:160.8vw;
@@ -1322,43 +1324,55 @@
   
   
   /*moon start*/
-  .moon{
-    background:black;
-    width:100px;
-    height: 100px;
+  .moon {
+    background: black;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     position: relative;
-    margin:0 auto;
-    margin-top: 36vw;
-    margin-bottom: 35vw;
-    
+    margin: 0 auto;
+    margin-top: 8vw;
   }
-  .moon::before{
+  
+  .moon::before {
     content: '';
     background-color: #6e00fe;
     position: absolute;
+    left: 0;
+    top: 0;
     display: block;
     height: 100%;
-    width:100%;
+    width: 100%;
     border-radius: 50%;
     z-index: -1;
-    animation:3.2s animation infinite alternate
-  }
-  @keyframes animation{
-    0%{
-        transform:translateX(0px) scale(0.9);
-        box-shadow:none;
-    }
-    50%{
-        transform:translate(0px,0px) scale(1.02);
-        box-shadow:0 0 10px #2600ff,0 0 80px 2px #0900ff;
-    }
-    100%{
-        transform:translateX(-80px) scale(0.9);
-        box-shadow: none;
-    }
+    animation: 3.2s animation infinite alternate;
   }
   
+
+  .moon {
+    width: 120px; 
+    height: 120px;
+    margin-top: 15vw; 
+  }
+
+  .moon::before {
+    animation: 2.5s animation-mobile infinite alternate;
+  }
+
+  @keyframes animation-mobile {
+    0% {
+      transform: translateX(-20px) scale(0.9); 
+      box-shadow: none;
+    }
+    50% {
+      transform: translateX(0px) scale(1.02); 
+      box-shadow: 0 0 8px #2600ff, 0 0 60px 2px #0900ff;
+    }
+    100% {
+      transform: translateX(20px) scale(0.9);
+      box-shadow: none;
+    }
+  }
   
   /*moon end*/
   
@@ -1429,7 +1443,55 @@
   }
   
   
-#section1,nav,.slider-buttons,.box-container__type2,.box2,.box3,.box-container__img,.box-container_type{
+#section1,nav,#section5,.slider-buttons,.box-container__type2,.box2,.box3,.box-container__img,.box-container_type{
   display:none;  
  }
+
+
+
+ #section5-mobile {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+
+.auto-slider-mobile__track {
+  display: flex;
+  width: 1300%; 
+  animation: auto-slide-mobile 25s linear infinite;
+}
+
+
+.auto-slider-mobile__img {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: 18vw;
+}
+
+.auto-slider-mobile__img img {
+  width: 100px;
+  height: auto;
+  max-height: 120px; 
+  object-fit: cover; 
+}
+
+
+@keyframes auto-slide-mobile {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 📱 모바일에서만 적용 */
+@media (min-width: 769px) {
+  .auto-slider-mobile__track {
+    animation: none; 
+}
+
   }
