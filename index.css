@@ -555,15 +555,46 @@ width: 100%;}
   background: none;
   padding: 10px;
   cursor: pointer;
-  font-size: clamp(1rem, 1rem, 2rem);
+  font-size: clamp(1rem, 1.35rem, 2rem);
   border-radius: 18px;
   transition: background-color 0.3s;
   width: 5vw;
   height: 5vw;
   border: 2px solid #ffc712;
+  text-align: center;
+}
+.btnspan{
+  line-height: 3.5vw;
+    
+}
+.slider-buttons .btn:hover {
+  border: 1px solid #93879c;
+}
+.slider-buttons5 {
+  position: absolute;
+  top: 2vw;
+  right: 85px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  z-index: 10;
 }
 
-.slider-buttons .btn:hover {
+.slider-buttons5 .btn {
+  color: #ffc712;
+  background: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: clamp(1rem, 1.35rem, 2rem);
+  border-radius: 18px;
+  transition: background-color 0.3s;
+  width: 5vw;
+  height: 5vw;
+  border: 2px solid #ffc712;
+  text-align: center;
+}
+
+.slider-buttons5 .btn:hover {
   border: 1px solid #93879c;
 }
 .slider-buttons4 {
@@ -581,12 +612,13 @@ width: 100%;}
   background: none;
   padding: 10px;
   cursor: pointer;
-  font-size: clamp(1rem, 1rem, 2rem);
+  font-size: clamp(1rem, 1.35rem, 2rem);
   border-radius: 18px;
   transition: background-color 0.3s;
   width: 5vw;
   height: 5vw;
   border: 2px solid #ffc712;
+  text-align: center;
 }
 
 .slider-buttons4 .btn:hover {

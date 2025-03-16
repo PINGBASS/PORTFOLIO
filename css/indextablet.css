@@ -547,7 +547,7 @@
     flex-direction: row;
     gap: 10px;
     z-index: 10;
-
+    
   }
   
   .slider-buttons .btn {
@@ -563,7 +563,33 @@
     border: 2px solid #ffc712;
   }
   
-  .slider-buttons .btn:hover {
+  .slider-buttons5 .btn:hover {
+    border: 1px solid #93879c;
+  } .slider-buttons {
+    position: absolute;
+    top: 63.2vw;
+    right: 71px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 10;
+
+  }
+
+  .slider-buttons5 .btn {
+    color: #ffc712;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: clamp(0.7rem, 0.8rem, 2rem);
+    border-radius: 18px;
+    transition: background-color 0.3s;
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid #ffc712;
+  }
+  
+  .slider-buttons5 .btn:hover {
     border: 1px solid #93879c;
   }
   .btn a{
