@@ -541,7 +541,7 @@
   
   .slider-buttons1 {
     position: absolute;
-  top: 95vh;
+  top: 97vh;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -1024,6 +1024,8 @@
     margin-top: 15px; 
     text-align: left;
     font-weight: 500;
+    filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
   }
   
   /* 스킬과설명글묶음 */
@@ -1495,3 +1497,4 @@
 }
 
   }
+}

@@ -6,7 +6,7 @@
   <title>포트폴리오</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/indextablet.css">
-  <link rel="stylesheet" href="css/indexmobile copy.css">
+  <link rel="stylesheet" href="css/indexmobilecopy.css">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="슬라이드.css">
   
@@ -20,7 +20,7 @@
   
 <div class="wrap_portfolio">
     
-    <!-- 섹션1인트로 -->
+    
   <section id="section1">
      <div class="section__1">
         <p class="section__type1">WEB<br> PORTFOLIO</p>
@@ -56,22 +56,22 @@
 
       <a href="#" id="wrap">
         <div class="list">
-            <div class="in "><img src="img/main7.png"></div>
+            <div class="in"><img src="img/main7.png" art="main이미지"></div>
             <div class="out"><p class="more"></p></div>
         </div>
     </a>
      
       <div class="box box2">
-        <img src="img/echo2.png">
+        <img src="img/echo2.png" art="main이미지"> 
       </div>
       <div class="box box3">
-        <img src="img/echo3.png">
+        <img src="img/echo3.png" art="main이미지">
       </div>
       <div class="box-container_type">
          <div class="box-container__type1">
              PROJECT : ECHO ARTS
          </div>
-        <a hraf=""><img src="img/icon_2.png" class="box-container__img"></a> 
+        <a hraf="#"><img src="img/icon_2.png" class="box-container__img" art="아이콘이미지"></a> 
          <div class="box-container__type2">
           기존 전시 홈페이지들과 차별화던 점으로 사용자 경험을 크게 개선하고 
           <br>전시의 몰입도를 높일 수 있게 개선한 전시홈페이지입니다 
@@ -98,11 +98,11 @@
   <!---->
   <section id="section3" class="slider-container"  >
     <div class="section3__1 slider">
-      <div class="section3__type1 slide" >
+      <div class="section3__type1 slide" style="display:none;">
         <div class="slider-buttons">
-          <button class="btn"><a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1">WIRE<br>PROTO</a></button>
-          <button class="btn"><a href="https://drive.google.com/file/d/1grl1PRw4htTvNtEFJ0JUUzeVQN0f-MK9/view?usp=drive_link">PLAN</a></button>
-          <button class="btn"><a href="https://pingbass.github.io/urban-redesign/">HOME<br>PAGE</a></button>
+          <a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1"><button class="btn">WIRE<br>PROTO</button></a>
+          <a href="https://drive.google.com/file/d/1grl1PRw4htTvNtEFJ0JUUzeVQN0f-MK9/view?usp=drive_link"><button class="btn">PLAN</button></a>
+          <a href="https://pingbass.github.io/urban-redesign/"><button class="btn">HOME<br>PAGE</button></a>
         </div>
         <div class="section3_right">
           <div class="right_img">
@@ -137,7 +137,7 @@
         
               <div class="skills">
                 
-                  <h3></h3>
+                 
                   <div class="skills_image">
                     <img src="img/10.png" alt="HTML5">
                     <img src="img/11.png" alt="CSS3">
@@ -153,23 +153,25 @@
 
 
               <div class="slider-buttons1">
-                <button class="btn"><a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1">WIRE<br>PROTO</a></button>
-                <button class="btn"><a href="https://drive.google.com/file/d/1I_LbF-OaBNxV58YV-QdklEjMuTAtRUpH/view?usp=drive_link">PLAN</a></button>
-                <button class="btn"><a href="https://pingbass.github.io/acho/">HOME<br>PAGE</a></button>
+                <a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1"><button class="btn">WIRE<br>PROTO</button></a>
+                <a href="https://drive.google.com/file/d/1I_LbF-OaBNxV58YV-QdklEjMuTAtRUpH/view?usp=drive_link"><button class="btn">PLAN</button></a>
+                <a href="https://pingbass.github.io/acho/"><button class="btn">HOME<br>PAGE</button></a>
               </div>
           </div>
           </div>
         </div>    
       </div>
   
-      <div class="section3__type2 slide" >
-        <div class="video-background" style="top: 0.771114px;">
-          <video autoplay="" loop="" muted="" playsinline="" src="img/mainVideo.mp4" type="video/mp4"></video>
-        </div>
+      <div class="section3__type2 slide" style="display:none;">
+        <video autoplay loop muted playsinline>
+          <source src="img/mainVideo.mp4" type="video/mp4">
+          브라우저가 비디오 태그를 지원하지 않습니다.
+      </video>
+      
         <div class="slider-buttons4">
-          <button class="btn"><a href="https://www.figma.com/design/bD4FL2ks9Q0PRPxviMGyKV/Pantaport-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?node-id=0-1&t=OKKFdiL97KhTX75u-1">WIRE<br>PROTO</a></button>
-          <button class="btn"><a href="https://docs.google.com/presentation/d/1lII_9JogBN13Q_2BfgY2SH8S4MsAXNc2/edit?usp=drive_link&ouid=106441283004466004328&rtpof=true&sd=true">PLAN</a></button>
-          <button class="btn"><a href="https://pingbass.github.io/PENTAPORT/">HOME<br>PAGE</a></button>
+          <a href="https://www.figma.com/design/bD4FL2ks9Q0PRPxviMGyKV/Pantaport-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?node-id=0-1&t=OKKFdiL97KhTX75u-1"><button class="btn">WIRE<br>PROTO</button></a>
+          <a href="https://docs.google.com/presentation/d/1lII_9JogBN13Q_2BfgY2SH8S4MsAXNc2/edit?usp=drive_link&ouid=106441283004466004328&rtpof=true&sd=true"><button class="btn">PLAN</button></a>
+          <a href="https://pingbass.github.io/PENTAPORT/"><button class="btn">HOME<br>PAGE</a></button>
         </div>
         <div class="section3_right1">
           <div class="content_p_2">
@@ -202,7 +204,6 @@
           
                 <div class="skills">
                   <div class="detail_item">
-                    <h3></h3>
                     <div class="skills_images1">
                       <img src="img/10.png" alt="HTML5">
                       <img src="img/11.png" alt="CSS3">
@@ -223,9 +224,9 @@
     
       <div class="section3__type3 slide"  >
         <div class="slider-buttons">
-          <button class="btn"><a href="">WIRE<br>PROTO</a></button>
-          <button class="btn"><a href="">PLAN</a></button>
-          <button class="btn"><a href="">HOME<br>PAGE</a></button>
+          <button class="btn"><a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1">WIRE<br>PROTO</a></button>
+          <button class="btn"><a href="https://drive.google.com/file/d/1fypFJnpKhkDLsovNmIL9fv6jkE5GA9x7/view?usp=drive_link">PLAN</a></button>
+          <button class="btn"><a href="https://pingbass.github.io/acho/">HOME<br>PAGE</a></button>
         </div>
         <div class="section3_right3">
           <div class="right_img2">
@@ -255,7 +256,7 @@
         
               <div class="skills">
                 <div class="detail_item">
-                  <h3></h3>
+                 
                   <div class="skills_images">
                     <img src="img/10.png" alt="HTML5">
                     <img src="img/11.png" alt="CSS3">
@@ -268,9 +269,9 @@
                 </div>
               </div>
               <div class="slider-buttons3">
-                <button class="btn"><a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1">WIRE<br>PROTO</a></button>
-                <button class="btn"><a href="https://drive.google.com/file/d/1fypFJnpKhkDLsovNmIL9fv6jkE5GA9x7/view?usp=drive_link">PLAN</a></button>
-                <button class="btn"><a href="https://pingbass.github.io/acho/">HOME<br>PAGE</a></button>
+                <a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1"><button class="btn">WIRE<br>PROTO</button></a>
+                <a href="https://drive.google.com/file/d/1fypFJnpKhkDLsovNmIL9fv6jkE5GA9x7/view?usp=drive_link"><button class="btn">PLAN</a>
+                <a href="https://pingbass.github.io/acho/"><button class="btn">HOME<br>PAGE</button></a>
               </div>
           </div>
 
@@ -279,11 +280,11 @@
         </div>    
       </div>
       <!--오런완섹션-->
-      <div class="section4__type4 slide"   >
+      <div class="section4__type4 slide"   style="display:none;">
         <div class="slider-buttons">
-          <button class="btn"><a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1">WIRE<br>PROTO</a></button>
-          <button class="btn"><a href="https://drive.google.com/file/d/1I_LbF-OaBNxV58YV-QdklEjMuTAtRUpH/view?usp=drive_link">PLAN</a></button>
-          <button class="btn"><a href="http://dustinjung.dothome.co.kr/">HOME<br>PAGE</a></button>
+          <a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1"><button class="btn">WIRE<br>PROTO</button></a>
+          <a href="https://drive.google.com/file/d/1I_LbF-OaBNxV58YV-QdklEjMuTAtRUpH/view?usp=drive_link"><button class="btn">PLAN</button></a>
+          <a href="http://dustinjung.dothome.co.kr/"><button class="btn">HOME<br>PAGE</button></a>
         </div>
         <div class="section3_right">
           <div class="right_img">
@@ -314,7 +315,7 @@
         
               <div class="skills">
                 
-                  <h3></h3>
+                 
                   <div class="skills_images2">
                     <img src="img/10.png" alt="HTML5">
                     <img src="img/11.png" alt="CSS3">
@@ -330,9 +331,9 @@
 
 
               <div class="slider-buttons1">
-                <button class="btn"><a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1">WIRE<br>PROTO</a></button>
-                <button class="btn"><a href="https://drive.google.com/file/d/1I_LbF-OaBNxV58YV-QdklEjMuTAtRUpH/view?usp=drive_link">PLAN</a></button>
-                <button class="btn"><a href="https://pingbass.github.io/acho/">HOME<br>PAGE</a></button>
+                <a href="https://www.figma.com/design/56Biu13ynXAP76CupR9tD8/UI-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B0%B1%EC%9C%A0%EC%A7%84?node-id=0-1&t=lzMR1ip6hb5bMtSW-1">  <button class="btn"></button>WIRE<br>PROTO</button></a>
+                <a href="https://drive.google.com/file/d/1I_LbF-OaBNxV58YV-QdklEjMuTAtRUpH/view?usp=drive_link">  <button class="btn"></button>PLAN</button></a>
+                <a href="https://pingbass.github.io/acho/">  <button class="btn"></button>HOME<br>PAGE</button></a>
               </div>
           </div>
           </div>
@@ -382,22 +383,22 @@
   <section id="section4">
     <div class="ellipse-container">
       <div class="ellipse ellipse1" >
-        <img src="img/1.png" class="image image-1">
-        <img src="img/2.png" class="image image-2">
-        <img src="img/3.png" class="image image-3">
-        <img src="img/4.png" class="image image-4">
-        <img src="img/5.png" class="image image-5">
+        <img src="img/1.png" class="image image-1" alt="이미지">
+        <img src="img/2.png" class="image image-2" alt="이미지">
+        <img src="img/3.png" class="image image-3"alt="이미지">
+        <img src="img/4.png" class="image image-4"alt="이미지">
+        <img src="img/5.png" class="image image-5"alt="이미지">
       </div>
       <div class="ellipse ellipse2" >
-        <img src="img/6.png" class="image image-1">
-        <img src="img/7.png" class="image image-2">
-        <img src="img/8.png" class="image image-3">
-        <img src="img/9.png" class="image image-4">
-        <img src="img/10.png" class="image image-5">
+        <img src="img/6.png" class="image image-1"alt="이미지">
+        <img src="img/7.png" class="image image-2"alt="이미지">
+        <img src="img/8.png" class="image image-3"alt="이미지">
+        <img src="img/9.png" class="image image-4"alt="이미지">
+        <img src="img/10.png" class="image image-5"alt="이미지">
       </div>
       <div class="ellipse ellipse3" >
-        <img src="img/11.png" class="image image-1">
-        <img src="img/12.png" class="image image-2">
+        <img src="img/11.png" class="image image-1"alt="이미지">
+        <img src="img/12.png" class="image image-2"alt="이미지">
       </div>
     </div>
   
@@ -409,9 +410,9 @@
                   <div class="skill-group-title">
                     Web Development
                     <div class="img_right">
-                      <img src="img/10.png">
-                      <img src="img/11.png">
-                      <img src="img/12.png">
+                      <img src="img/10.png"alt="이미지">
+                      <img src="img/11.png"alt="이미지">
+                      <img src="img/12.png"alt="이미지">
                     </div>  
                   </div>
                   <div class="skill-item">
@@ -438,9 +439,9 @@
                   <div class="skill-group-title">
                     Graphic Design
                     <div class="img_right">
-                      <img src="img/2.png">
-                      <img src="img/1.png">
-                      <img src="img/3.png">
+                      <img src="img/2.png"alt="이미지">
+                      <img src="img/1.png"alt="이미지">
+                      <img src="img/3.png"alt="이미지">
                     </div>  
                   </div>
                   <div class="skill-item">
@@ -467,8 +468,8 @@
                   <div class="skill-group-title">
                     UI/UX Design
                     <div class="img_right">
-                      <img src="img/7.png">
-                      <img src="img/6.png">
+                      <img src="img/7.png"alt="이미지">
+                      <img src="img/6.png"alt="main이미지">
                     </div>  
                   </div>
                   <div class="skill-item">
@@ -568,65 +569,65 @@
   <section id="section5">
     <div>
       <div class="section5__img section5__img_1">
-          <img src="img/LIIUST/22.png">
-          <img src="img/LIIUST/26.jpg">
-          <img src="img/LIIUST/23.png">
-          <img src="img/LIIUST/24.png">
-          <img src="img/LIIUST/25.png">
-          <img src="img/LIIUST/11.png">
-          <img src="img/LIIUST/16.png">
-          <img src="img/LIIUST/6.jpg">
-          <img src="img/LIIUST/9.jpg">
-          <img src="img/LIIUST/8.jpg">
-          <img src="img/LIIUST/4.jpg">
-          <img src="img/LIIUST/5.jpg">
-          <img src="img/LIIUST/7.jpg">
-          <img src="img/LIIUST/44.jpg">
-          <img src="img/LIIUST/55.png">
-          <img src="img/LIIUST/33.png">
-          <img src="img/LIIUST/66.png">
-          <img src="img/LIIUST/1.jpg">
-          <img src="img/LIIUST/2.jpg">
-          <img src="img/LIIUST/3.jpg">
-          <img src="img/LIIUST/10.jpg">
-          <img src="img/LIIUST/11.jpg">
-          <img src="img/LIIUST/111.jpg">
-          <img src="img/LIIUST/13.jpg">
-          <img src="img/LIIUST/14.jpg">
-          <img src="img/LIIUST/15.jpg">
-          <img src="img/LIIUST/116.jpg">
-          <img src="img/LIIUST/66.png">
+          <img src="img/LIIUST/22.png"  alt="이미지">
+          <img src="img/LIIUST/26.jpg"  alt="이미지">
+          <img src="img/LIIUST/23.png"  alt="이미지">
+          <img src="img/LIIUST/24.png"  alt="이미지">
+          <img src="img/LIIUST/25.png"  alt="이미지">
+          <img src="img/LIIUST/11.png"  alt="이미지">
+          <img src="img/LIIUST/16.png"  alt="이미지">
+          <img src="img/LIIUST/6.jpg"  alt="이미지">
+          <img src="img/LIIUST/9.jpg"  alt="이미지">
+          <img src="img/LIIUST/8.jpg"  alt="이미지">
+          <img src="img/LIIUST/4.jpg"  alt="이미지">
+          <img src="img/LIIUST/5.jpg"  alt="이미지">
+          <img src="img/LIIUST/7.jpg"  alt="이미지">
+          <img src="img/LIIUST/44.jpg"  alt="이미지">
+          <img src="img/LIIUST/55.png"  alt="이미지">
+          <img src="img/LIIUST/33.png"  alt="이미지">
+          <img src="img/LIIUST/66.png"  alt="이미지">
+          <img src="img/LIIUST/1.jpg"  alt="이미지">
+          <img src="img/LIIUST/2.jpg"  alt="이미지">
+          <img src="img/LIIUST/3.jpg"  alt="이미지">
+          <img src="img/LIIUST/10.jpg"  alt="이미지">
+          <img src="img/LIIUST/11.jpg"  alt="이미지">
+          <img src="img/LIIUST/111.jpg"  alt="이미지">
+          <img src="img/LIIUST/13.jpg"  alt="이미지">
+          <img src="img/LIIUST/14.jpg"  alt="이미지">
+          <img src="img/LIIUST/15.jpg"  alt="이미지">
+          <img src="img/LIIUST/116.jpg"  alt="이미지">
+          <img src="img/LIIUST/66.png"  alt="이미지">
       </div>
 
       <div class="section5__img section5__img_2">
-        <img src="img/LIIUST/22.png">
-        <img src="img/LIIUST/26.jpg">
-        <img src="img/LIIUST/23.png">
-        <img src="img/LIIUST/24.png">
-        <img src="img/LIIUST/25.png">
-        <img src="img/LIIUST/11.png">
-        <img src="img/LIIUST/16.png">
-        <img src="img/LIIUST/6.jpg">
-        <img src="img/LIIUST/9.jpg">
-        <img src="img/LIIUST/8.jpg">
-        <img src="img/LIIUST/4.jpg">
-        <img src="img/LIIUST/5.jpg">
-        <img src="img/LIIUST/7.jpg">
-        <img src="img/LIIUST/44.jpg">
-        <img src="img/LIIUST/55.png">
-        <img src="img/LIIUST/33.png">
-        <img src="img/LIIUST/66.png">
-        <img src="img/LIIUST/1.jpg">
-        <img src="img/LIIUST/2.jpg">
-        <img src="img/LIIUST/3.jpg">
-        <img src="img/LIIUST/10.jpg">
-        <img src="img/LIIUST/11.jpg">
-        <img src="img/LIIUST/111.jpg">
-        <img src="img/LIIUST/13.jpg">
-        <img src="img/LIIUST/14.jpg">
-        <img src="img/LIIUST/15.jpg">
-        <img src="img/LIIUST/116.jpg">
-        <img src="img/LIIUST/66.png">
+        <img src="img/LIIUST/22.png"  alt="이미지">
+        <img src="img/LIIUST/26.jpg"  alt="이미지">
+        <img src="img/LIIUST/23.png"  alt="이미지">
+        <img src="img/LIIUST/24.png"  alt="이미지">
+        <img src="img/LIIUST/25.png"  alt="이미지">
+        <img src="img/LIIUST/11.png"  alt="이미지">
+        <img src="img/LIIUST/16.png"  alt="이미지">
+        <img src="img/LIIUST/6.jpg"  alt="이미지">
+        <img src="img/LIIUST/9.jpg"  alt="이미지">
+        <img src="img/LIIUST/8.jpg"  alt="이미지">
+        <img src="img/LIIUST/4.jpg"  alt="이미지">
+        <img src="img/LIIUST/5.jpg"  alt="이미지">
+        <img src="img/LIIUST/7.jpg"  alt="이미지">
+        <img src="img/LIIUST/44.jpg"  alt="이미지">
+        <img src="img/LIIUST/55.png"  alt="이미지">
+        <img src="img/LIIUST/33.png"  alt="이미지">
+        <img src="img/LIIUST/66.png"  alt="이미지">
+        <img src="img/LIIUST/1.jpg"  alt="이미지">
+        <img src="img/LIIUST/2.jpg"  alt="이미지">
+        <img src="img/LIIUST/3.jpg"  alt="이미지">
+        <img src="img/LIIUST/10.jpg"  alt="이미지">
+        <img src="img/LIIUST/11.jpg"  alt="이미지">
+        <img src="img/LIIUST/111.jpg"  alt="이미지">
+        <img src="img/LIIUST/13.jpg"  alt="이미지">
+        <img src="img/LIIUST/14.jpg"  alt="이미지">
+        <img src="img/LIIUST/15.jpg"  alt="이미지">
+        <img src="img/LIIUST/116.jpg"  alt="이미지">
+        <img src="img/LIIUST/66.png"  alt="이미지">
       </div>
   </div>
 </section>
@@ -636,34 +637,34 @@
   <div class="auto-slider-mobile">
     <div class="auto-slider-mobile__track">
       <div class="auto-slider-mobile__img">
-        <img src="img/LIIUST/22.png">
-        <img src="img/LIIUST/26.jpg">
-        <img src="img/LIIUST/23.png">
-        <img src="img/LIIUST/24.png">
-        <img src="img/LIIUST/25.png">
-        <img src="img/LIIUST/11.png">
-        <img src="img/LIIUST/16.png">
-        <img src="img/LIIUST/6.jpg">
-        <img src="img/LIIUST/9.jpg">
-        <img src="img/LIIUST/8.jpg">
-        <img src="img/LIIUST/4.jpg">
-        <img src="img/LIIUST/5.jpg">
-        <img src="img/LIIUST/7.jpg">
-        <img src="img/LIIUST/44.jpg">
-        <img src="img/LIIUST/55.png">
-        <img src="img/LIIUST/33.png">
-        <img src="img/LIIUST/66.png">
-        <img src="img/LIIUST/1.jpg">
-        <img src="img/LIIUST/2.jpg">
-        <img src="img/LIIUST/3.jpg">
-        <img src="img/LIIUST/10.jpg">
-        <img src="img/LIIUST/11.jpg">
-        <img src="img/LIIUST/111.jpg">
-        <img src="img/LIIUST/13.jpg">
-        <img src="img/LIIUST/14.jpg">
-        <img src="img/LIIUST/15.jpg">
-        <img src="img/LIIUST/116.jpg">
-        <img src="img/LIIUST/66.png">
+        <img src="img/LIIUST/22.png"  alt="이미지">
+        <img src="img/LIIUST/26.jpg"  alt="이미지">
+        <img src="img/LIIUST/23.png"  alt="이미지">
+        <img src="img/LIIUST/24.png"  alt="이미지">
+        <img src="img/LIIUST/25.png"  alt="이미지">
+        <img src="img/LIIUST/11.png"  alt="이미지">
+        <img src="img/LIIUST/16.png"  alt="이미지">
+        <img src="img/LIIUST/6.jpg"  alt="이미지">
+        <img src="img/LIIUST/9.jpg"  alt="이미지">
+        <img src="img/LIIUST/8.jpg"  alt="이미지">
+        <img src="img/LIIUST/4.jpg"  alt="이미지">
+        <img src="img/LIIUST/5.jpg"  alt="이미지">
+        <img src="img/LIIUST/7.jpg"  alt="이미지">
+        <img src="img/LIIUST/44.jpg"  alt="이미지">
+        <img src="img/LIIUST/55.png"  alt="이미지">
+        <img src="img/LIIUST/33.png"  alt="이미지">
+        <img src="img/LIIUST/66.png"  alt="이미지">
+        <img src="img/LIIUST/1.jpg"  alt="이미지">
+        <img src="img/LIIUST/2.jpg"  alt="이미지">
+        <img src="img/LIIUST/3.jpg"  alt="이미지">
+        <img src="img/LIIUST/10.jpg"  alt="이미지">
+        <img src="img/LIIUST/11.jpg"  alt="이미지">
+        <img src="img/LIIUST/111.jpg"  alt="이미지">
+        <img src="img/LIIUST/13.jpg"  alt="이미지">
+        <img src="img/LIIUST/14.jpg"  alt="이미지">
+        <img src="img/LIIUST/15.jpg"  alt="이미지">
+        <img src="img/LIIUST/116.jpg"  alt="이미지">
+        <img src="img/LIIUST/66.png"  alt="이미지">
       </div>
     </div>
   </div>
@@ -774,8 +775,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 점핑
                 setTimeout(() => {
                     box.classList.add('jump');
-                }, 600);  // 첫 애니메이션 끝난 후 실행
-            }, index * 100);  // 조금씩 지연 효과를 주기 위해 setTimeout 사용
+                }, 600); 
+            }, index * 100);  
         }
     });
 });
@@ -784,9 +785,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // 자동 슬라이드 관련 변수
 /*
-const sliders = document.querySelectorAll('.slider'); // 모든 슬라이더 선택
+const sliders = document.querySelectorAll('.slider'); 
 const allSlides = document.querySelectorAll('.slide');
-let slideIntervals = {}; // 슬라이드별 인터벌 저장 객체
+let slideIntervals = {}; 
 
 // 자동 슬라이드 함수
 function autoSlide(slider, index) {
@@ -804,8 +805,8 @@ function autoSlide(slider, index) {
 
 // 슬라이드 자동 시작
 function startAutoSlide(slider) {
-  let sliderId = slider.getAttribute('id'); // 슬라이더별 ID 가져오기
-  if (slideIntervals[sliderId]) return; // 이미 실행 중이면 중복 실행 방지
+  let sliderId = slider.getAttribute('id'); 
+  if (slideIntervals[sliderId]) return;
 
   slideIntervals[sliderId] = setInterval(() => autoSlide(slider), 4500);
 }
@@ -844,9 +845,9 @@ function moveToSlide(slider, slideIndex) {
 
   slider.style.transform = `translateX(-${slideIndex * 100}vw)`;
   slider.setAttribute('data-index', slideIndex);
-}*/
+}
 
-
+*/
 
 
 //section5

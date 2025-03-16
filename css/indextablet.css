@@ -1076,6 +1076,8 @@
     font-weight: 500;
     display: flex;
     display: -webkit-inline-box;
+    filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
   }
   
   /* 스킬과설명글묶음 */
