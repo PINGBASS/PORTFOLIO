@@ -719,148 +719,150 @@
 
 
  
- 
-</body>
 <script>
-document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault(); 
-    const targetSection = document.querySelector(this.getAttribute('href'));
-
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault(); 
+      const targetSection = document.querySelector(this.getAttribute('href'));
   
-    targetSection.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center' 
+    
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center' 
+      });
     });
   });
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
- 
- const options = {
-   root: null,
-   rootMargin: "0px",
-   threshold: 0.5 
- };
-
-
- const observer = new IntersectionObserver((entries, observer) => {
-   entries.forEach(entry => {
-     if (entry.isIntersecting) {
-       
-       entry.target.classList.add('active');
-       observer.unobserve(entry.target); 
-     }
-   });
- }, options);
-
-
- const section4Line = document.querySelector('.section4_line');
- observer.observe(section4Line);
-});
-
-
-
-
-
-
-
- window.addEventListener('scroll', function () {
-    const boxes = document.querySelectorAll('.box');
-    const windowHeight = window.innerHeight;
-
-    boxes.forEach((box, index) => {
-        const boxTop = box.getBoundingClientRect().top;
-
-        
-        if (boxTop < windowHeight - 150) {
+  
+  
+  
+  
+  document.addEventListener("DOMContentLoaded", function () {
+   
+   const options = {
+     root: null,
+     rootMargin: "0px",
+     threshold: 0.5 
+   };
+  
+  
+   const observer = new IntersectionObserver((entries, observer) => {
+     entries.forEach(entry => {
+       if (entry.isIntersecting) {
+         
+         entry.target.classList.add('active');
+         observer.unobserve(entry.target); 
+       }
+     });
+   }, options);
+  
+  
+   const section4Line = document.querySelector('.section4_line');
+   observer.observe(section4Line);
+  });
+  
+  
+  
+  
+  
+  
+  
+   window.addEventListener('scroll', function () {
+      const boxes = document.querySelectorAll('.box');
+      const windowHeight = window.innerHeight;
+  
+      boxes.forEach((box, index) => {
+          const boxTop = box.getBoundingClientRect().top;
+  
           
-            box.style.opacity = 0;
-            box.style.transform = 'translateY(50px)';
-            box.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.6s ease-in-out';
-
-           
-            setTimeout(() => {
-                box.style.opacity = 1;
-                box.style.transform = 'translateY(0)';
-                box.style.transitionDelay = `${index * 0.3}s`;
-
+          if (boxTop < windowHeight - 150) {
+            
+              box.style.opacity = 0;
+              box.style.transform = 'translateY(50px)';
+              box.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.6s ease-in-out';
+  
              
-                setTimeout(() => {
-                    box.classList.add('jump');
-                }, 600); 
-            }, index * 100);  
-        }
-    });
-});
-
-
-
-
-
-const sliders = document.querySelectorAll('.slider'); 
-const allSlides = document.querySelectorAll('.slide');
-let slideIntervals = {}; 
-
-
-function autoSlide(slider) {
-  let slides = slider.querySelectorAll('.slide');
-  let currentIndex = parseInt(slider.getAttribute('data-index')) || 0;
-
-  currentIndex++;
-  if (currentIndex >= slides.length) {
-    currentIndex = 0;
-  }
-
-  moveToSlide(slider, currentIndex);
-}
-
-
-function startAutoSlide(slider) {
-  let sliderId = slider.getAttribute('id'); 
-  if (slideIntervals[sliderId]) return;
-
-  slideIntervals[sliderId] = setInterval(() => autoSlide(slider), 4500);
-}
-
-
-function stopAutoSlide(slider) {
-  let sliderId = slider.getAttribute('id');
-  clearInterval(slideIntervals[sliderId]);
-  delete slideIntervals[sliderId]; 
-}
-
-
-const buttonGroups = document.querySelectorAll('.slider-container');
-
-buttonGroups.forEach(container => {
-  const slider = container.querySelector('.slider');
-  const buttons = container.querySelectorAll('.btn');
-
-  buttons.forEach((button, index) => {
-    button.addEventListener('mouseenter', () => stopAutoSlide(slider)); 
-    button.addEventListener('mouseleave', () => startAutoSlide(slider)); 
-
-    button.addEventListener('click', () => {
-      moveToSlide(slider, index);
-    });
+              setTimeout(() => {
+                  box.style.opacity = 1;
+                  box.style.transform = 'translateY(0)';
+                  box.style.transitionDelay = `${index * 0.3}s`;
+  
+               
+                  setTimeout(() => {
+                      box.classList.add('jump');
+                  }, 600); 
+              }, index * 100);  
+          }
+      });
   });
-
-
-  startAutoSlide(slider);
-});
-
-
-function moveToSlide(slider, slideIndex) {
-  const slides = slider.querySelectorAll('.slide');
-
-
-  slider.style.transition = "transform 0.5s ease-in-out";
-  slider.style.transform = `translateX(-${slideIndex * 100}vw)`;
-  slider.setAttribute('data-index', slideIndex);
-}
+  
+  
+  
+  
+  
+  const sliders = document.querySelectorAll('.slider'); 
+  const allSlides = document.querySelectorAll('.slide');
+  let slideIntervals = {}; 
+  
+  
+  function autoSlide(slider) {
+    let slides = slider.querySelectorAll('.slide');
+    let currentIndex = parseInt(slider.getAttribute('data-index')) || 0;
+  
+    currentIndex++;
+    if (currentIndex >= slides.length) {
+      currentIndex = 0;
+    }
+  
+    moveToSlide(slider, currentIndex);
+  }
+  
+  
+  function startAutoSlide(slider) {
+    let sliderId = slider.getAttribute('id'); 
+    if (slideIntervals[sliderId]) return;
+  
+    slideIntervals[sliderId] = setInterval(() => autoSlide(slider), 4500);
+  }
+  
+  
+  function stopAutoSlide(slider) {
+    let sliderId = slider.getAttribute('id');
+    clearInterval(slideIntervals[sliderId]);
+    delete slideIntervals[sliderId]; 
+  }
+  
+  
+  const buttonGroups = document.querySelectorAll('.slider-container');
+  
+  buttonGroups.forEach(container => {
+    const slider = container.querySelector('.slider');
+    const buttons = container.querySelectorAll('.btn');
+  
+    buttons.forEach((button, index) => {
+      button.addEventListener('mouseenter', () => stopAutoSlide(slider)); 
+      button.addEventListener('mouseleave', () => startAutoSlide(slider)); 
+  
+      button.addEventListener('click', () => {
+        moveToSlide(slider, index);
+      });
+    });
+  
+  
+    startAutoSlide(slider);
+  });
+  
+  
+  function moveToSlide(slider, slideIndex) {
+    const slides = slider.querySelectorAll('.slide');
+  
+  
+    slider.style.transition = "transform 0.5s ease-in-out";
+    slider.style.transform = `translateX(-${slideIndex * 100}vw)`;
+    slider.setAttribute('data-index', slideIndex);
+  }
 </script>
+</body>
+
+
+
 </html>
