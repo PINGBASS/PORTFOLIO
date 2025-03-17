@@ -172,7 +172,7 @@
   }
   
   nav ul li a:hover::after {
-    transform: scaleX(1);
+    transform: scaleX(0);
     transform-origin: bottom left;
   }
   
@@ -292,7 +292,7 @@
       position: absolute;
       top: 34vw;
       right: 0;
-      transition: 0.5sease-in-out;
+      transition: 0.5ease-in-out;
       width:24%;
   }
   
