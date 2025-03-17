@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/indextablet.css">
   <link rel="stylesheet" href="css/indexmobilecopy.css">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="슬라이드.css">
+
   
   
    
@@ -801,7 +801,7 @@
   
   const sliders = document.querySelectorAll('.slider'); 
   const allSlides = document.querySelectorAll('.slide');
-  let slideIntervals = {}; 
+  let slideIntervals = {}
   
   
   function autoSlide(slider) {
@@ -817,14 +817,21 @@
   }
   
   
-  function startAutoSlide(slider) {
-    
-    let sliderId = slider.getAttribute('id'); 
-    if (slideIntervals[sliderId]) return;
-  slideIntervals
-    slideIntervals[sliderId] = setInterval(() => autoSlide(slider), 4500);
-  }
+  function startAutoSlide(slider) { 
+  let sliderId = slider.getAttribute('id'); 
   
+  // slideIntervals가 객체로 정의되어 있어야 합니다.
+  if (!window.slideIntervals) {
+    window.slideIntervals = {}; // slideIntervals가 정의되지 않으면 객체로 초기화
+  }
+
+  // 만약 슬라이드에 이미 자동 슬라이드가 설정되어 있다면 중단
+  if (slideIntervals[sliderId]) return; 
+  
+  // 새로운 슬라이드 인터벌 설정
+  slideIntervals[sliderId] = setInterval(() => autoSlide(slider), 4500); 
+}
+
   
   function stopAutoSlide(slider) {
     let sliderId = slider.getAttribute('id');
@@ -861,9 +868,9 @@
     slider.style.transform = `translateX(-${slideIndex * 100}vw)`;
     slider.setAttribute('data-index', slideIndex);
   }
+
+
+
 </script>
 </body>
-
-
-
 </html>
