@@ -166,7 +166,7 @@ nav ul li a:hover {
 }
 
 nav ul li a:hover::after {
-  transform: scaleX(0);
+  transform: scaleX(1);
   transform-origin: bottom left;
 }
 
@@ -289,9 +289,12 @@ nav ul li a:hover::after {
     position: absolute;
     top: 22.2vw;
     right: 32px;
-    transition:  0.5s ease-in-out;
+    transition: 0.5sease-in-out;
     width:24%;
 }
+
+
+
 .scroll-box {
   width: 20vw;           
   height: 1200px;        
