@@ -301,7 +301,7 @@
       position: absolute;
       top: 25.2vw;
       right: 32px;
-      transition: 0.5ease-in-out;
+      transition: 1 ease-in-out;
       width:24%;
   }
   

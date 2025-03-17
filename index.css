@@ -289,12 +289,9 @@ nav ul li a:hover::after {
     position: absolute;
     top: 22.2vw;
     right: 32px;
-    transition: 0.5 ease-in-out;
+    transition: 1 ease-in-out;
     width:24%;
 }
-
-
-
 .scroll-box {
   width: 20vw;           
   height: 1200px;        
