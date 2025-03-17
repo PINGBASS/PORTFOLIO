@@ -724,19 +724,19 @@
 <script>
 document.querySelectorAll('nav a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault(); // 기본 동작 막는.
+    e.preventDefault(); 
     const targetSection = document.querySelector(this.getAttribute('href'));
 
-    // 섹션의 중앙으로 스크롤
+  
     targetSection.scrollIntoView({
       behavior: 'smooth',
-      block: 'center' // 'start'로 상단을 맞추는거고  'center'는 중앙을 기준으로 맞추는거임.
+      block: 'center' 
     });
   });
 });
 
 
-//라인
+
 
 document.addEventListener("DOMContentLoaded", function () {
  
@@ -746,7 +746,7 @@ document.addEventListener("DOMContentLoaded", function () {
    threshold: 0.5 
  };
 
- // observer 생성
+
  const observer = new IntersectionObserver((entries, observer) => {
    entries.forEach(entry => {
      if (entry.isIntersecting) {
@@ -766,7 +766,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
- //뱍스컨테이너
+
 
  window.addEventListener('scroll', function () {
     const boxes = document.querySelectorAll('.box');
@@ -777,18 +777,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         
         if (boxTop < windowHeight - 150) {
-            // 초기 상태
+          
             box.style.opacity = 0;
             box.style.transform = 'translateY(50px)';
             box.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.6s ease-in-out';
 
-            //  등장
+           
             setTimeout(() => {
                 box.style.opacity = 1;
                 box.style.transform = 'translateY(0)';
                 box.style.transitionDelay = `${index * 0.3}s`;
 
-                // 점핑
+             
                 setTimeout(() => {
                     box.classList.add('jump');
                 }, 600); 
@@ -799,13 +799,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// 자동 슬라이드 관련 변수
+
 
 const sliders = document.querySelectorAll('.slider'); 
 const allSlides = document.querySelectorAll('.slide');
 let slideIntervals = {}; 
 
-// 자동 슬라이드 함수
+
 function autoSlide(slider) {
   let slides = slider.querySelectorAll('.slide');
   let currentIndex = parseInt(slider.getAttribute('data-index')) || 0;
@@ -818,7 +818,7 @@ function autoSlide(slider) {
   moveToSlide(slider, currentIndex);
 }
 
-// 슬라이드 자동 시작
+
 function startAutoSlide(slider) {
   let sliderId = slider.getAttribute('id'); 
   if (slideIntervals[sliderId]) return;
@@ -826,14 +826,14 @@ function startAutoSlide(slider) {
   slideIntervals[sliderId] = setInterval(() => autoSlide(slider), 4500);
 }
 
-// 슬라이드 자동 멈춤
+
 function stopAutoSlide(slider) {
   let sliderId = slider.getAttribute('id');
   clearInterval(slideIntervals[sliderId]);
   delete slideIntervals[sliderId]; 
 }
 
-// 버튼 그룹별 이벤트 추가 (각 슬라이더마다 따로 적용)
+
 const buttonGroups = document.querySelectorAll('.slider-container');
 
 buttonGroups.forEach(container => {
@@ -849,15 +849,15 @@ buttonGroups.forEach(container => {
     });
   });
 
-  // 슬라이드 자동 시작
+
   startAutoSlide(slider);
 });
 
-// 특정 슬라이드로 이동하는 함수
+
 function moveToSlide(slider, slideIndex) {
   const slides = slider.querySelectorAll('.slide');
 
-  // 애니메이션 추가
+
   slider.style.transition = "transform 0.5s ease-in-out";
   slider.style.transform = `translateX(-${slideIndex * 100}vw)`;
   slider.setAttribute('data-index', slideIndex);
