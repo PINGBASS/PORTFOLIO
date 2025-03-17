@@ -559,12 +559,13 @@
   }
   .slider-buttons5 {
     position: absolute;
-    top: 95.5vh;
-    display: flex;
+    top: 104.5vh;
+    display: flex
+;
     flex-direction: row;
     gap: 10px;
     z-index: 10;
-    left: 19vw;
+    left: 14vw;
   }
   
   .slider-buttons4 {
@@ -588,6 +589,7 @@
     width: 14vw;
     height: 14vw;
     border: 2px solid #ffc712;
+    line-height: 3.5vw;
   }
   
   .slider-buttons .btn:hover {
@@ -604,6 +606,7 @@
     width: 14vw;
     height: 14vw;
     border: 2px solid #ffc712;
+    line-height: 3.5vw;
   }
   
   .slider-buttons1 .btn:hover {
@@ -620,6 +623,7 @@
     width: 14vw;
     height: 14vw;
     border: 2px solid #ffc712;
+    line-height: 3.5vw;
   }
   
   .slider-buttons5 .btn:hover {
@@ -639,8 +643,11 @@
     width: 14vw;
     height: 14vw;
     border: 2px solid #ffc712;
+    line-height: 3.5vw;
   }
-  
+  .btnspan{
+   line-height: 6.5vw;
+  }
   .btn a{
     color:#ffc712;
   }
