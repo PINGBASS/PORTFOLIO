@@ -548,14 +548,15 @@
     z-index: 10;
   }
   .slider-buttons {
+    
     position: absolute;
-    top: 95.5vh;
-    display: flex
-;
+    top: 103.5vh;
+    display: flex;
     flex-direction: row;
     gap: 10px;
     z-index: 10;
-    left: 22vw;
+    left: 19vw;
+}
   }
   .slider-buttons5 {
     position: absolute;
@@ -570,7 +571,7 @@
   
   .slider-buttons4 {
     position: absolute;
-    top:160.8vw;
+    top:140.8vw;
     display: flex;
     flex-direction: row;
     gap: 10px;
