@@ -292,7 +292,7 @@
       position: absolute;
       top: 34vw;
       right: 0;
-      transition: 1 ease-in-out;
+      transition:  0.5s ease-in-out;
       width:24%;
   }
   
