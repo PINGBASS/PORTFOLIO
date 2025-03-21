@@ -509,7 +509,7 @@ width: 100%;}
 .slider {
   display: flex;
   transition: transform 1s ease-in-out;
-  width: 400%; 
+  width: 500%; 
 }
 
 /* 각 슬라이드 */
@@ -524,6 +524,9 @@ width: 100%;}
 .section3__type1 {
   background-color: #090d32;
 }
+.section3__type11 {
+  background-color: #999999;
+}
 
 .section3__type2 {
   background-color: #0d021a; 
@@ -536,6 +539,11 @@ width: 100%;}
   background-color: #8890c7;/*#676c91;*/
 }
 .section4span{
+  color:#fff;
+  font-size:clamp(0.7rem,1.5rem,1.7rem);
+  font-weight: 700;
+}
+.section4span1{
   color:#fff;
   font-size:clamp(0.7rem,1.5rem,1.7rem);
   font-weight: 700;
@@ -687,11 +695,18 @@ width: 100%;}
   font-size: 5rem;
   color: #ffc712;
 }
+.content3_11 {
+  font-size: 5rem;
+  color: #ffc712;
+}
 .content{
   color:#fff;
 }
 
 .right_img {
+  width: 56%;
+}
+.right_img11 {
   width: 56%;
 }
 .right_img1 {
@@ -704,6 +719,12 @@ width: 100%;}
 
 
 .right_img img {
+  height: auto;
+  object-fit: cover;
+  margin-left: 7vw; 
+  width:40.5vw;
+}
+.right_img11 img {
   height: auto;
   object-fit: cover;
   margin-left: 7vw; 
@@ -733,6 +754,13 @@ width: 100%;}
   z-index: 5; 
   margin-left: -8vw; 
 }
+.content_1 {
+  max-width: 45%; 
+  padding: 20px;
+  color: white;
+  z-index: 5; 
+  margin-left: -8vw; 
+}
 .content4 {
   max-width: 45%; 
   padding: 20px;
@@ -741,7 +769,7 @@ width: 100%;}
   margin-left: -8vw; 
   margin-bottom: 5vw;
 }
-.content h2,.content1 h2,.content_p_2 h2,.content_p_3 h2 ,.content4 h2 {
+.content h2,.content1 h2,.content_p_2 h2,.content_p_3 h2 ,.content4 h2,.content_1 h2 {
   font-size: 5rem;
   margin-bottom: 3vw;
   line-height: 6vw;
@@ -851,6 +879,14 @@ img:hover {
   width: 36vw;
   color:#ffffff;
 }
+.content_p_11 {
+  font-size: clamp(0.8rem, 1rem, 1.5rem);
+  margin-bottom: 20px;
+  font-weight: 400;
+  line-height: 1.75vw;
+  width: 36vw;
+  color:#ffffff;
+}
 .content_p_3 {
   font-size: clamp(0.8rem, 1.3rem, 1.5rem);
   margin-bottom: 20px;
@@ -871,6 +907,14 @@ img:hover {
 
 
 .section3_right {
+  display: flex;
+  align-items: center;
+  width: 100%;
+gap: 3vw;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.section3_right_1 {
   display: flex;
   align-items: center;
   width: 100%;
