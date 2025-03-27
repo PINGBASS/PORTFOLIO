@@ -496,7 +496,7 @@
     height: 45vh;
   }
   .section3__type11{
-   background:#999999;
+ 
     width:100%;
     height: 45vh;
   }
@@ -560,7 +560,7 @@
     flex-direction: row;
     gap: 10px;
     z-index: 10;
-    left: 19vw;
+    left: 10vw;
 }
   
   .slider-buttons5 {
@@ -785,6 +785,10 @@
     display: flex;
     justify-content: flex-start;
   }
+  .project_info2{
+    display:flex;
+    gap: 4vw;
+  }
   .detail_item h3 {
     font-size: 0.6rem;
     font-weight: 400;
@@ -799,7 +803,21 @@
     color: #fff;
   
   }
-  .detail_item{
+  .detail_item1 h3 {
+    font-size: 0.6rem;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color:#fff;
+  
+  }
+  .detail_item1 p {
+    font-size: clamp(0.6rem ,0.6rem,0.9rem);
+    line-height: 1.5;
+    font-weight: 200;
+    color: #fff;
+  
+  }
+  .detail_item1{
     margin-top:0.5vw;
   }
   .skills_images,.skills_images2,.skills_image {
@@ -825,7 +843,8 @@
     display: flex;
     grid-template-columns: 1fr 1fr;  
     gap: 4vw;
-    flex-direction: column
+    flex-direction: column;
+    margin-top: 6vw;
   }
   .project_details1 {
     margin-top: 20px;
@@ -874,6 +893,15 @@
     display:none;
   }
   .content_p_11{
+    font-size: clamp(0.8rem, 0.9rem, 1.5rem);
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 2.6vw;
+    width:45vw;
+    color:#fff;
+    display:none;
+  }
+  .content_p_111{
     font-size: clamp(0.8rem, 0.9rem, 1.5rem);
     margin-bottom: 20px;
     font-weight: 400;

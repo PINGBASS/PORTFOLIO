@@ -572,17 +572,33 @@
     line-height: 6vw;
   }
   
-   .slider-buttons {
+   /*.slider-buttons {
     position: absolute;
-    top: 66.2vw;
-    right: 57px;
-    display: flex;
+    top: 8.2vw;
+    left: 48px; 
+    display: flex
+;
     flex-direction: row;
     gap: 10px;
     z-index: 10;
     text-align: center;
+    right: 7px;
+
+  }*/
+  .slider-buttons {
+    position: absolute;
+        top: 13.2vw;
+        /* left: 48px; */
+        display: flex
+;
+        flex-direction: row;
+        gap: 10px;
+        z-index: 10;
+        text-align: center;
+        right: 16px;
 
   }
+ 
 
   .slider-buttons5 .btn {
     color: #ffc712;
@@ -728,7 +744,7 @@
   .right_img img {
     height: auto;
     object-fit: cover;
-    margin-left: 4vw;
+    margin-left: 2vw;
     width: 90%
   }
   .right_img11 img {
@@ -760,6 +776,7 @@
     color: white;
     z-index: 5; 
     margin-left: -8vw; 
+    margin-top: 7vw;
   }
   .content4 {
     max-width: 45%; 
@@ -791,6 +808,18 @@
   
   }
   .detail_item p {
+    font-size: clamp(0.6rem ,0.8rem,0.9rem);
+    line-height: 1.5;
+    font-weight: 200;
+  
+  }
+  .detail_item1 h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0px;
+  
+  }
+  .detail_item1 p {
     font-size: clamp(0.6rem ,0.8rem,0.9rem);
     line-height: 1.5;
     font-weight: 200;
@@ -860,9 +889,10 @@
   }
   .project_info2 {
     display: flex;
-        width: 55vw;
-        flex-direction: column;
-        /* gap: 5vw; */
+    width: 33vw;
+    flex-direction: row;
+    /* gap: 5vw; */
+    margin-left: 1vw;
        
     
   }
@@ -892,6 +922,15 @@
     display:none;
   }
   .content_p_11{
+    font-size: clamp(0.8rem, 0.9rem, 1.5rem);
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 2.6vw;
+    width:45vw;
+    color:#fff;
+    display:none;
+  }
+  .content_p_111{
     font-size: clamp(0.8rem, 0.9rem, 1.5rem);
     margin-bottom: 20px;
     font-weight: 400;
@@ -945,11 +984,9 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin-top: 8vw;
-    /* gap: 6vw; */
-    justify-content: flex-start;
+    margin-top: 13vw;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 2vw;
   }
    
   .section3_right_1 {

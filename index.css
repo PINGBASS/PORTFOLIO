@@ -539,7 +539,12 @@ width: 100%;}
   background-color: #8890c7;/*#676c91;*/
 }
 .section4span{
-  color:#fff;
+  color:#ffffff;
+  font-size:clamp(0.7rem,1.5rem,1.7rem);
+  font-weight: 700;
+}
+.section44span{
+  color:#000000;
   font-size:clamp(0.7rem,1.5rem,1.7rem);
   font-weight: 700;
 }
@@ -551,7 +556,7 @@ width: 100%;}
 .slider-buttons {
   position: absolute;
   top: 2vw;
-  right: 85px;
+  right: 47px;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -771,8 +776,8 @@ width: 100%;}
 }
 .content h2,.content1 h2,.content_p_2 h2,.content_p_3 h2 ,.content4 h2,.content_1 h2 {
   font-size: 5rem;
-  margin-bottom: 3vw;
-  line-height: 6vw;
+  margin-bottom: 1vw;
+  line-height: 4.5vw;
   color: #fff;
 }
 
@@ -783,16 +788,30 @@ width: 100%;}
 }
 .detail_item h3 {
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 0px;
-  color: #fff;
+  color: #ffffff;
 }
 .detail_item p {
   font-size: 0.9rem;
   line-height: 1.5;
-  font-weight: 300;
-  color: #fff;
+  font-weight: 400;
+  color: #ffffff;
 }
+
+.detail_item1 h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color: #000000;
+}
+.detail_item1 p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #000000;
+}
+
 .detail_item{
   margin-top:0.5vw;
 }
@@ -874,10 +893,18 @@ img:hover {
 .content_p_1 {
   font-size: clamp(0.8rem, 1rem, 1.5rem);
   margin-bottom: 20px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.75vw;
   width: 36vw;
-  color:#ffffff;
+  color:#eeeeee;
+}
+.content_p_111 {
+  font-size: clamp(0.8rem, 1rem, 1.5rem);
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 1.75vw;
+  width: 36vw;
+  color:#000000;
 }
 .content_p_11 {
   font-size: clamp(0.8rem, 1rem, 1.5rem);
